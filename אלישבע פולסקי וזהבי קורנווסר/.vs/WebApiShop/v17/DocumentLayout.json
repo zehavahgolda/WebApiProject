@@ -1,0 +1,181 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\web_api\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\webapishop\\wwwroot\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\wwwroot\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\web_api\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\webapishop\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\web_api\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\webapishop\\wwwroot\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\wwwroot\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\web_api\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\webapishop\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\web_api\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\webapishop\\listofusers.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\listofusers.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\web_api\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\webapishop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\web_api\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\webapishop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\web_api\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\webapishop\\webapishop.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\webapishop.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\web_api\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\webapishop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\web_api\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\webapishop\\.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}",
+      "RelativeMoniker": "D:0:0:{E4E69375-7C68-49BD-A5ED-221FB1170E3D}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "home.js",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\wwwroot\\home.js",
+              "RelativeDocumentMoniker": "WebApiShop\\wwwroot\\home.js",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\wwwroot\\home.js",
+              "RelativeToolTip": "WebApiShop\\wwwroot\\home.js",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-22T21:39:47.445Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebApiShop\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebApiShop\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-22T20:39:59.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebApiShop\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebApiShop\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T21:27:01.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ListOfUsers.txt",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\ListOfUsers.txt",
+              "RelativeDocumentMoniker": "WebApiShop\\ListOfUsers.txt",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\ListOfUsers.txt",
+              "RelativeToolTip": "WebApiShop\\ListOfUsers.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-31T06:30:21.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "home.html",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\wwwroot\\home.html",
+              "RelativeDocumentMoniker": "WebApiShop\\wwwroot\\home.html",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\wwwroot\\home.html",
+              "RelativeToolTip": "WebApiShop\\wwwroot\\home.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-23T00:26:23.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\Models\\User.cs",
+              "RelativeDocumentMoniker": "WebApiShop\\Models\\User.cs",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\Models\\User.cs",
+              "RelativeToolTip": "WebApiShop\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T16:02:46.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApiShop\\appsettings.json",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\appsettings.json",
+              "RelativeToolTip": "WebApiShop\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-22T22:01:50.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": ".editorconfig",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\.editorconfig",
+              "RelativeDocumentMoniker": "WebApiShop\\.editorconfig",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\.editorconfig",
+              "RelativeToolTip": "WebApiShop\\.editorconfig",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-30T16:21:09.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WebApiShop.csproj",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\WebApiShop.csproj",
+              "RelativeDocumentMoniker": "WebApiShop\\WebApiShop.csproj",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\WebApiShop.csproj",
+              "RelativeToolTip": "WebApiShop\\WebApiShop.csproj",
+              "ViewState": "AgIAAAQAAACA50A3P/INwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-22T22:04:36.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\Program.cs",
+              "RelativeDocumentMoniker": "WebApiShop\\Program.cs",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD \u05EA\u05E9\u05E4\u05D5 \u05D9\u05D3\\WEB_API\\\u05D0\u05DC\u05D9\u05E9\u05D1\u05E2 \u05E4\u05D5\u05DC\u05E1\u05E7\u05D9 \u05D5\u05D6\u05D4\u05D1\u05D9 \u05E7\u05D5\u05E8\u05E0\u05D5\u05D5\u05E1\u05E8\\WebApiShop\\Program.cs",
+              "RelativeToolTip": "WebApiShop\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T20:30:42.682Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

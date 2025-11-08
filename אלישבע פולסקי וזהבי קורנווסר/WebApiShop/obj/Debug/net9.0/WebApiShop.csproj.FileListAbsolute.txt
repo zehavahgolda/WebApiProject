@@ -1,0 +1,167 @@
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\bin\Debug\net9.0\appsettings.json
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.staticwebassets.runtime.json
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.staticwebassets.endpoints.json
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.exe
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.deps.json
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.runtimeconfig.json
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.dll
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.pdb
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.AssemblyInfoInputs.cache
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.AssemblyInfo.cs
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.csproj.CoreCompileInputs.cache
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\scopedcss\bundle\WebApiShop.styles.css
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets\msbuild.WebApiShop.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets\msbuild.WebApiShop.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets\msbuild.build.WebApiShop.props
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.WebApiShop.props
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.WebApiShop.props
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.dll
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\refint\WebApiShop.dll
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.pdb
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.genruntimeconfig.cache
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\ref\WebApiShop.dll
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\bzkvzih99k-pp1hpwp5lq.gz
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\dsl5nreg3f-njpdtac92m.gz
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\fls4vyjglx-y3iyvqo3xs.gz
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\j2085wetj1-bu3r2nnzgm.gz
+C:\Users\eli7p\Desktop\WEB_APII\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\xz3lgvx61x-g5e35elbc4.gz
+M:\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\appsettings.Development.json
+M:\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\appsettings.json
+M:\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.staticwebassets.runtime.json
+M:\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.staticwebassets.endpoints.json
+M:\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.exe
+M:\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.deps.json
+M:\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.runtimeconfig.json
+M:\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.dll
+M:\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.pdb
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rpswa.dswa.cache.json
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.GeneratedMSBuildEditorConfig.editorconfig
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.AssemblyInfoInputs.cache
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.AssemblyInfo.cs
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.csproj.CoreCompileInputs.cache
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.MvcApplicationPartsAssemblyInfo.cache
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rjimswa.dswa.cache.json
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\scopedcss\bundle\WebApiShop.styles.css
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\bzkvzih99k-pp1hpwp5lq.gz
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\j2085wetj1-bu3r2nnzgm.gz
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.build.json
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.build.json.cache
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.development.json
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.dll
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\refint\WebApiShop.dll
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.pdb
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.genruntimeconfig.cache
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\ref\WebApiShop.dll
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\f60anehfqd-isl0n90ygc.gz
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\xz3lgvx61x-9kw3lgnwgx.gz
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\dsl5nreg3f-osk89t3tpi.gz
+M:\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\fls4vyjglx-jpp37ikxdk.gz
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\appsettings.Development.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\appsettings.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.staticwebassets.runtime.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.staticwebassets.endpoints.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.exe
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.deps.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.runtimeconfig.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.dll
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.pdb
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.GeneratedMSBuildEditorConfig.editorconfig
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.AssemblyInfoInputs.cache
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.AssemblyInfo.cs
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.csproj.CoreCompileInputs.cache
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.MvcApplicationPartsAssemblyInfo.cache
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rjimswa.dswa.cache.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\scopedcss\bundle\WebApiShop.styles.css
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.build.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.build.json.cache
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.development.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.dll
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\refint\WebApiShop.dll
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.pdb
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.genruntimeconfig.cache
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\ref\WebApiShop.dll
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\dsl5nreg3f-nv4y1381gl.gz
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\f60anehfqd-i1vr2uymim.gz
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\xz3lgvx61x-dz42xizcue.gz
+D:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\fls4vyjglx-fy912skig4.gz
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\appsettings.Development.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\appsettings.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.staticwebassets.runtime.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.staticwebassets.endpoints.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.exe
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.deps.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.runtimeconfig.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.dll
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\bin\Debug\net9.0\WebApiShop.pdb
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rpswa.dswa.cache.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.GeneratedMSBuildEditorConfig.editorconfig
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.AssemblyInfoInputs.cache
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.AssemblyInfo.cs
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.csproj.CoreCompileInputs.cache
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.MvcApplicationPartsAssemblyInfo.cache
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rjimswa.dswa.cache.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\scopedcss\bundle\WebApiShop.styles.css
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\fls4vyjglx-awbfc8ifyp.gz
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.build.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.build.json.cache
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.development.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.dll
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\refint\WebApiShop.dll
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.pdb
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.genruntimeconfig.cache
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\ref\WebApiShop.dll
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\f60anehfqd-3r8b2a0bt1.gz
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\xz3lgvx61x-c8qs2ekqc7.gz
+E:\לימודים תשפו יד\WEB_API\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\dsl5nreg3f-3r8b2a0bt1.gz
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\bin\Debug\net9.0\appsettings.Development.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\bin\Debug\net9.0\appsettings.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\bin\Debug\net9.0\WebApiShop.staticwebassets.endpoints.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\bin\Debug\net9.0\WebApiShop.staticwebassets.runtime.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\bin\Debug\net9.0\WebApiShop.exe
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\bin\Debug\net9.0\WebApiShop.deps.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\bin\Debug\net9.0\WebApiShop.runtimeconfig.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\bin\Debug\net9.0\WebApiShop.dll
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\bin\Debug\net9.0\WebApiShop.pdb
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\WebApiShop.GeneratedMSBuildEditorConfig.editorconfig
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\WebApiShop.AssemblyInfoInputs.cache
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\WebApiShop.AssemblyInfo.cs
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\WebApiShop.csproj.CoreCompileInputs.cache
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\WebApiShop.MvcApplicationPartsAssemblyInfo.cache
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\rjimswa.dswa.cache.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\scopedcss\bundle\WebApiShop.styles.css
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\staticwebassets.build.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\staticwebassets.build.json.cache
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\staticwebassets.development.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\WebApiShop.dll
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\refint\WebApiShop.dll
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\WebApiShop.pdb
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\WebApiShop.genruntimeconfig.cache
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\ref\WebApiShop.dll
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\compressed\dsl5nreg3f-ddubnc94h7.gz
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\obj\Debug\net9.0\compressed\fls4vyjglx-xwd7obuhe6.gz

@@ -1,0 +1,4 @@
+wwwroot\home.html
+wwwroot\home.js
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\wwwroot\home.html
+D:\לימודים תשפו יד\WEB_API\אלישבע פולסקי וזהבי קורנווסר\WebApiShop\wwwroot\home.js

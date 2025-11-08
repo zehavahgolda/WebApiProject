@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>דף התחברות ורישום</title>
+    <script src="home.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 5vw;
+            margin-top: 10vh;
+        }
+
+        .box {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        input, button, a, label {
+            display: block;
+            margin-bottom: 1vh;
+        }
+
+        input {
+            padding: 0.5rem;
+            width: 15rem;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.6rem 1rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- עמוד התחברות -->
+        <div class="loginPage">
+            <div class="box">
+                <label>שם משתמש</label>
+                <input class="us in" type="text" />
+
+                <label>סיסמה</label>
+                <input class="pas in" type="password" />
+
+                <button onclick="login()">התחברות</button>
+                <a href="#register">משתמש חדש?</a>
+            </div>
+        </div>
+
+        <!-- עמוד רישום -->
+        <div class="RegisterPage" id="register">
+            <div class="box">
+                <label>שם משתמש</label>
+                <input class="userName in" type="text" />
+
+                <label>סיסמה</label>
+                <input class="password in" type="password" />
+
+                <label>שם פרטי</label>
+                <input class="firstName in" type="text" />
+
+                <label>שם משפחה</label>
+                <input class="lastName in" type="text" />
+
+                <button onclick="new_user()">רישום</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
