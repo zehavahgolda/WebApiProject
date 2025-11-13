@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>עדכון פרטי משתמש</title>
+    <script src="home.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #f7f7f7;
+        }
+
+        .box {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        input, button {
+            display: block;
+            margin-bottom: 1vh;
+            padding: 0.5rem;
+            width: 15rem;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>עדכון פרטים</h2>
+
+        <label>שם משתמש</label>
+        <input id="userName" type="text">
+
+        <label>שם פרטי</label>
+        <input id="firstName" type="text">
+
+        <label>שם משפחה</label>
+        <input id="lastName" type="text">
+
+        <label>סיסמה</label>
+        <input id="password" type="password">
+
+        <button onclick="up_date()">עדכון</button>
+    </div>
+
+    <script>
+        // בעת פתיחת הדף נביא את הנתונים מה-sessionStorage
+        const user = JSON.parse(sessionStorage.getItem('user'));
+        if (!user) {
+            alert("לא נמצא משתמש מחובר. חוזרים לדף התחברות.");
+            window.location.href = "home.html";
+        } else {
+            document.getElementById("userName").value = user.userName;
+            document.getElementById("firstName").value = user.firstName;
+            document.getElementById("lastName").value = user.lastName;
+            document.getElementById("password").value = user.password;
+        }
+    </script>
+</body>
+</html>
