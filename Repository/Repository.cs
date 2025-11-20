@@ -2,9 +2,9 @@
 using System.Text.Json;
 namespace Repository
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
-         public string _filePath = "ListOfUsers.txt";
+        public string _filePath = "ListOfUsers.txt";
 
         public User GetUsersById(int id)
         {

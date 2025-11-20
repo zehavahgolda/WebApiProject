@@ -11,14 +11,15 @@ namespace WebApiShop.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly string _filePath = "ListOfUsers.txt";
-        Userservice _userservice=new Userservice();
 
-        public UsersController()
+        IUserservice _userservice;
+        public UsersController(IUserservice userservice)
         {
-            if (!System.IO.File.Exists(_filePath))
-                System.IO.File.Create(_filePath).Close();
+            _userservice = userservice;
+
         }
+
+ 
 
         [HttpPost]
         public ActionResult<User> Post([FromBody] User user)
@@ -36,7 +37,7 @@ namespace WebApiShop.Controllers
         [HttpPost("Login")]
         public ActionResult<User> Login([FromBody] User user)
         {
-            user= _userservice.loginServices(user);
+            user = _userservice.loginServices(user);
             if (user == null)
                 return NoContent();
             return Ok(user);
@@ -45,19 +46,19 @@ namespace WebApiShop.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] User updatedUser)
         {
-             _userservice.update(updatedUser, id);
+            _userservice.update(updatedUser, id);
         }
 
         [HttpGet("{id}")]
         public ActionResult<User> Get(int id)
         {
             User user = _userservice.GetUserByidService(id);
-            if (user == null)  
+            if (user == null)
                 return NoContent();
             return Ok(user);
- 
+
         }
-       
-        
+
+
     }
 }

@@ -10,12 +10,19 @@ namespace WebApiShop.Controllers
     [ApiController]
     public class PasswordsController : ControllerBase
     {
-        passwordservice _passwordservice = new passwordservice();
+        Ipasswordservice _passwordservice;//
+
+        public PasswordsController(Ipasswordservice passwordservice)
+        {
+            _passwordservice = passwordservice;
+        }
+
+        //= new passwordservice();
         // GET: api/<passworsController>
         [HttpGet]
         public void Get(string pass)
         {
-            
+
         }
 
         // GET api/<passworsController>/5
@@ -29,11 +36,11 @@ namespace WebApiShop.Controllers
         [HttpPost]
         public ActionResult<passwordEntity> Post([FromBody] string value)
         {
-            passwordEntity _passwordEntity = _passwordservice.Level(value);
-            if (_passwordEntity == null)
+
+            passwordEntity resPas = _passwordservice.Level(value);
+            if (resPas == null)
                 return NoContent();
-            return Ok(_passwordEntity);
-         
+            return Ok(resPas);
         }
 
         // PUT api/<passworsController>/5

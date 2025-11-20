@@ -1,4 +1,4 @@
-﻿const baseUrl = "https://localhost:44382/api/Users";
+﻿const baseUrl = "https://localhost:44382/api/Users"; // שנה אם ה-API רץ על פורט אחר
 
 
 //משתמש חדש
@@ -12,7 +12,8 @@ async function new_user() {
         alert("אנא מלא את כל השדות");
         return;
     }
-    const postData = { userName, password, firstName, lastName };
+    const id=0
+    const postData = { id,userName, password, firstName, lastName };
 
     const response = await fetch(baseUrl, {
         method: 'POST',
@@ -44,7 +45,7 @@ async function login() {
         const data = await response.json();
         sessionStorage.setItem('user', JSON.stringify(data));
         alert(`ברוך שובך, ${data.firstName || data.userName}!`);
-           window.location.href = "update.html"; 
+        window.location.href="update.html"
     } else {
         alert("שם המשתמש או הסיסמה שגויים!");
     }
@@ -94,8 +95,8 @@ async function check_password() {
         });
         const dataPost = await response.json();
         const prog = document.querySelector(".progress");
-        prog.value = dataPost.strength * 25;
-        console.log(dataPost);
+    prog.value = dataPost.strength * 25;
+    console.log(dataPost);
         if (response.status == 200) {
             return dataPost.strength / 4;
         }

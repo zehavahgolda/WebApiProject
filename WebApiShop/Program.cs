@@ -1,6 +1,12 @@
-var builder = WebApplication.CreateBuilder(args);
+﻿using WebApiShop.Controllers;
+using Services;
+using Repository;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
+//builder.Services.AddScoped<IPasswordsController, PasswordsController>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<Ipasswordservice, passwordservice>();
+builder.Services.AddScoped<IUserservice, Userservice>();
 
 builder.Services.AddControllers();
 
