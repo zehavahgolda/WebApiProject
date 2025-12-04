@@ -1,12 +1,14 @@
-﻿using Entity;
+﻿using Repository.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Repository
 {
     public interface IUserRepository
     {
-        User addUser(User user);
-        User GetUsersById(int id);
-        User login(User user);
-        void updateUser(int id, User user);
+        Task<User> AddUser(User user);
+        Task<User> FindUser(User user);
+        Task<User> GetUsersById(int id);
+        Task updateUser(int id, User user);
     }
 }

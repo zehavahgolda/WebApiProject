@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-//using WebApiShop.Models;
 using Services;
-using Entity;
-using Repository;
+using Repository.Models;
+using System.Threading.Tasks;
 
 namespace WebApiShop.Controllers
 {
@@ -11,54 +9,49 @@ namespace WebApiShop.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+        private readonly IUserservice _userservice;
 
-        IUserservice _userservice;
         public UsersController(IUserservice userservice)
         {
             _userservice = userservice;
-
         }
 
- 
-
         [HttpPost]
-        public ActionResult<User> Post([FromBody] User user)
+        public async Task<ActionResult<User>> Post([FromBody] User user)
         {
-
-            User acceptedUser = _userservice.addUserServices(user);
+            User acceptedUser = await _userservice.addUserServices(user);
 
             if (acceptedUser == null)
             {
                 return BadRequest("סיסמא חלשה -נסה סיסמא שונה");
             }
-            return CreatedAtAction(nameof(Get), new { Id = acceptedUser.id }, acceptedUser);
+
+            return CreatedAtAction(nameof(Get), new { Id = acceptedUser.Id }, acceptedUser);
         }
 
         [HttpPost("Login")]
-        public ActionResult<User> Login([FromBody] User user)
+        public async Task<ActionResult<User>> Login([FromBody] User user)
         {
-            user = _userservice.loginServices(user);
-            if (user == null)
+            User loggedUser = await _userservice.loginServices(user);
+            if (loggedUser == null)
                 return NoContent();
-            return Ok(user);
+            return Ok(loggedUser);
         }
 
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] User updatedUser)
+        public async Task<IActionResult> Put(int id, [FromBody] User updatedUser)
         {
-            _userservice.update(updatedUser, id);
+            await _userservice.update(updatedUser, id);
+            return NoContent();
         }
 
         [HttpGet("{id}")]
-        public ActionResult<User> Get(int id)
+        public async Task<ActionResult<User>> Get(int id)
         {
-            User user = _userservice.GetUserByidService(id);
+            User user = await _userservice.GetUserByidService(id);
             if (user == null)
                 return NoContent();
             return Ok(user);
-
         }
-
-
     }
 }

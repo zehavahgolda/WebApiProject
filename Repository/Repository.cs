@@ -1,76 +1,41 @@
-﻿using Entity;
-using System.Text.Json;
+﻿using Microsoft.EntityFrameworkCore;
+using Repository.Models;
+using System.Threading.Tasks;
+
 namespace Repository
 {
     public class UserRepository : IUserRepository
     {
-        public string _filePath = "ListOfUsers.txt";
+        Store_329391924Context _store_329391924Context;
 
-        public User GetUsersById(int id)
+        public UserRepository(Store_329391924Context store_329391924Context)
         {
-            var lines = System.IO.File.ReadAllLines(_filePath);
-            foreach (var line in lines)
-            {
-                if (string.IsNullOrWhiteSpace(line)) continue;
-                var user = JsonSerializer.Deserialize<User>(line);
-                if (user.id == id)
-                    return user;
-            }
-            return null;
+            _store_329391924Context = store_329391924Context;
+        }
+        public async Task<User> GetUsersById(int id)
+        {
+            return await _store_329391924Context.Users.FindAsync(id);
         }
 
-        public User addUser(User user)
+  
+        public async Task<User> AddUser(User user)
         {
-            int numberOfUsers = System.IO.File.ReadLines(_filePath).Count();
-            user.id = numberOfUsers + 1;
-
-            string userJson = JsonSerializer.Serialize(user);
-            System.IO.File.AppendAllText(_filePath, userJson + Environment.NewLine);
-
+            await _store_329391924Context.Users.AddAsync(user);
+            await _store_329391924Context.SaveChangesAsync();
             return user;
-
-        }
-        public void updateUser(int id, User user)
-        {
-            var lines = System.IO.File.ReadAllLines(_filePath).ToList();
-            bool found = false;
-
-            for (int i = 0; i < lines.Count; i++)
-            {
-                if (string.IsNullOrWhiteSpace(lines[i])) continue;
-                var user2 = JsonSerializer.Deserialize<User>(lines[i]);
-                if (user.id == id)
-                {
-                    lines[i] = JsonSerializer.Serialize(user);
-                    found = true;
-                    break;
-                }
-            }
-
-            if (found)
-            {
-                System.IO.File.WriteAllLines(_filePath, lines);
-
-            }
-
-
         }
 
-
-        public User login(User user)
+        public async Task updateUser(int id, User user)
         {
-            var lines = System.IO.File.ReadAllLines(_filePath);
-
-            foreach (var line in lines)
-            {
-                if (string.IsNullOrWhiteSpace(line)) continue;
-
-                var user2 = JsonSerializer.Deserialize<User>(line);
-                if (user.userName == user.userName && user.password == user.password)
-                    return (user);
-            }
-
-            return null;
+            _store_329391924Context.Users.Update(user);
+            await _store_329391924Context.SaveChangesAsync();
+        }
+        public async Task<User> FindUser(User user)
+        {
+            return await _store_329391924Context.Users
+                .FirstOrDefaultAsync(u =>
+                    u.Email == user.Email &&
+                    u.Password == user.Password);
         }
     }
 }

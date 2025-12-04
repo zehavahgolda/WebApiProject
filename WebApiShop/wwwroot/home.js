@@ -40,7 +40,7 @@ async function login() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(log)
     });
-
+    alert(response)
     if (response.ok) {
         const data = await response.json();
         sessionStorage.setItem('user', JSON.stringify(data));
