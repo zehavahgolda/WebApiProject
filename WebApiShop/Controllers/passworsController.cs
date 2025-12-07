@@ -17,8 +17,7 @@ namespace WebApiShop.Controllers
             _passwordservice = passwordservice;
         }
 
-        //= new passwordservice();
-        // GET: api/<passworsController>
+ 
         [HttpGet]
         public void Get(string pass)
         {
@@ -45,14 +44,16 @@ namespace WebApiShop.Controllers
 
         // PUT api/<passworsController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] string newPassword)
         {
+          
         }
 
         // DELETE api/<passworsController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+
         }
     }
 }

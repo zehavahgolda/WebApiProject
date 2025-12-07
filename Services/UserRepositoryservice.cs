@@ -1,5 +1,5 @@
 ﻿using Repository;
-using Repository.Models;
+using Entity    ;
 using System.Threading.Tasks;
 
 namespace Services
@@ -31,14 +31,12 @@ namespace Services
 
         public async Task<User> loginServices(User user)
         {
-            return await _IuserRepository.FindUser(user);
+            return await _IuserRepository.Login(user);
         }
 
-        public async Task<int> update(User user, int id)
+        public async Task update(User user, int id)
         {
             await _IuserRepository.updateUser(id, user);
-            return 1;
-            //צריך טיפןל דחוףףףףףף
         }
     }
 }

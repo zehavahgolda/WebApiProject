@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Repository.Models;
+namespace Entity;
 
 public partial class Product
 {

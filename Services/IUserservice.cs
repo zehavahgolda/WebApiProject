@@ -1,4 +1,5 @@
-﻿using Repository.Models;
+﻿using Entity;
+using Repository;
 using System.Threading.Tasks;
 
 namespace Services
@@ -8,6 +9,6 @@ namespace Services
         Task<User> GetUserByidService(int id);
         Task<User> addUserServices(User user);
         Task<User> loginServices(User user);
-        Task<int> update(User user, int id);
+        Task update(User user, int id);
     }
 }

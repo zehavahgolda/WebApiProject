@@ -3,17 +3,16 @@
 
 //משתמש חדש
 async function new_user() {
-    const userName = document.querySelector(".userName").value;
+    const email = document.querySelector(".userName").value;
     const password = document.querySelector(".password").value;
     const firstName = document.querySelector(".firstName").value;
     const lastName = document.querySelector(".lastName").value;
 
-    if (!userName || !password || !firstName || !lastName) {
+    if (!email || !password || !firstName || !lastName) {
         alert("אנא מלא את כל השדות");
         return;
     }
-    const id=0
-    const postData = { id,userName, password, firstName, lastName };
+    const postData = { email, password, firstName, lastName };
 
     const response = await fetch(baseUrl, {
         method: 'POST',

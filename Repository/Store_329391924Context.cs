@@ -3,8 +3,9 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Entity;
 
-namespace Repository.Models;
+namespace Repository;
 
 public partial class Store_329391924Context : DbContext
 {
@@ -15,10 +16,43 @@ public partial class Store_329391924Context : DbContext
 
     
     public virtual DbSet<User> Users { get; set; }
-
+    public virtual DbSet<Catogery> Catogeries { get; set; }
+    public virtual DbSet<Product> Products { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        
+        modelBuilder.Entity<Catogery>(entity =>
+        {
+            entity.HasNoKey();
+            entity.Property(e => e.CatogeryName)
+                .HasMaxLength(20)
+                .IsFixedLength()
+                .HasColumnName("Catogery_Name");
+            entity.Property(e => e.Id)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("id");
+        });
+
+        modelBuilder.Entity<Product>(entity =>
+        {
+            entity.HasNoKey();
+            entity.Property(e => e.CatogeryId).HasColumnName("Catogery_ID");
+            entity.Property(e => e.DescreptionProduct)
+                .HasMaxLength(20)
+                .IsFixedLength()
+                .HasColumnName("Descreption_Product");
+            entity.Property(e => e.Id)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("id");
+            entity.Property(e => e.Path)
+                .HasMaxLength(20)
+                .IsFixedLength();
+            entity.Property(e => e.ProductName)
+                .HasMaxLength(20)
+                .IsFixedLength()
+                .HasColumnName("Product_Name");
+        });
+
+
 
         modelBuilder.Entity<User>(entity =>
         {
