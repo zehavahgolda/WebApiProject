@@ -20,7 +20,7 @@ namespace Repository
 
         public async Task<Order> AddOrder(Order order)
         {
-            _store_329391924Context.Orders.Add(order);
+            await _store_329391924Context.Orders.AddAsync(order);
             await _store_329391924Context.SaveChangesAsync();
             return order;
         }

@@ -14,6 +14,7 @@ builder.Services.AddScoped<IUserservice, Userservice>();
 builder.Services.AddScoped<ICatogeryRepsitory, CatogeryRepsitory>();
 builder.Services.AddScoped<ICatgoryService,CatgoryService> ();
 builder.Services.AddScoped<IOrderService,OrderService> ();
+builder.Services.AddScoped<IOrderrRepository, OrderrRepository>();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
 builder.Services.AddScoped<IProductservice,Productservice  > ();
 builder.Services.AddControllers();
