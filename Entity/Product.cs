@@ -7,15 +7,17 @@ namespace Entity;
 
 public partial class Product
 {
-    public int Id { get; set; }
-
-    public int? CatogeryId { get; set; }
+    public int ProductId { get; set; }
 
     public string ProductName { get; set; }
 
-    public string DescreptionProduct { get; set; }
+    public double? Price { get; set; }
 
-    public int? Price { get; set; }
+    public int? CategoryId { get; set; }
 
-    public string Path { get; set; }
+    public string Description { get; set; }
+
+    public virtual Category Category { get; set; }
+
+    public virtual ICollection<OrdeItem> OrdeItems { get; set; } = new List<OrdeItem>();
 }

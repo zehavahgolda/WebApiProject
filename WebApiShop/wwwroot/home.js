@@ -45,7 +45,9 @@ async function login() {
         sessionStorage.setItem('user', JSON.stringify(data));
         alert(`ברוך שובך, ${data.firstName || data.userName}!`);
         window.location.href="update.html"
-    } else {
+    }
+    else
+    {
         alert("שם המשתמש או הסיסמה שגויים!");
     }
 }

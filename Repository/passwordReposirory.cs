@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    internal class passwordReposirory
+    public class passwordReposirory
     {
 
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Entity;
+using Repository;
 namespace Repository
 {
     public interface IUserRepository

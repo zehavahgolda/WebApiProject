@@ -5,9 +5,11 @@ using System.Collections.Generic;
 
 namespace Entity;
 
-public partial class Catogery
+public partial class Category
 {
-    public int Id { get; set; }
+    public int CatogeryId { get; set; }
 
     public string CatogeryName { get; set; }
+
+    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 }
