@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{29BB9927-D419-4451-A433-5E2E5C80EBFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOs", "ODTs\DTOs.csproj", "{092B2313-B951-4E86-9083-CD807B64384E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{29BB9927-D419-4451-A433-5E2E5C80EBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29BB9927-D419-4451-A433-5E2E5C80EBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29BB9927-D419-4451-A433-5E2E5C80EBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{092B2313-B951-4E86-9083-CD807B64384E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{092B2313-B951-4E86-9083-CD807B64384E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{092B2313-B951-4E86-9083-CD807B64384E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{092B2313-B951-4E86-9083-CD807B64384E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

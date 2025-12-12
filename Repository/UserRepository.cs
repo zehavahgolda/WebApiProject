@@ -6,18 +6,23 @@ namespace Repository
 {
     public class UserRepository : IUserRepository
     {
-        Store_329391924Context _store_329391924Context;
+        private readonly Store_329391924Context _store_329391924Context;
 
         public UserRepository(Store_329391924Context store_329391924Context)
         {
             _store_329391924Context = store_329391924Context;
         }
-        public async Task<User> GetUsersById(int id)
+
+        public async Task<IEnumerable<User>> GetUsers()
+        {
+            return await _store_329391924Context.Users.ToListAsync();
+        }
+
+        public async Task<User> GetById(int id)
         {
             return await _store_329391924Context.Users.FindAsync(id);
         }
 
-  
         public async Task<User> AddUser(User user)
         {
             await _store_329391924Context.Users.AddAsync(user);
@@ -25,7 +30,7 @@ namespace Repository
             return user;
         }
 
-        public async Task updateUser(int id, User user)
+        public async Task UpdateUser(int id, User user)
         {
             _store_329391924Context.Users.Update(user);
             await _store_329391924Context.SaveChangesAsync();
@@ -33,11 +38,9 @@ namespace Repository
 
         public async Task<User> Login(User user)
         {
-            return await _store_329391924Context.Users.
-               FirstOrDefaultAsync(x =>x.Email==user.
-               Email && x.Password==user.Password);
+            return await _store_329391924Context.Users
+                .FirstOrDefaultAsync(x => x.Email == user.Email &&
+                                          x.Password == user.Password);
         }
-     
-
     }
 }

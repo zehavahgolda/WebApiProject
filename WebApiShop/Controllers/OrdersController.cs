@@ -2,6 +2,7 @@
 using Services;
 using Repository;
 using Entity;
+using DTOs;
 using System.Threading.Tasks;
 
 namespace WebApiShop.Controllers
@@ -24,11 +25,11 @@ namespace WebApiShop.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Order>> Post([FromBody] Order order)
+        public async Task<ActionResult<OrderDto>> Post([FromBody] Order order)
         {
-            Order _order = await _orderService.addOrder(order);
+            OrderDto _orderdto = await _orderService.addOrder(order);
 
-            if (_order == null)
+            if (_orderdto == null)
             {
                 return BadRequest();
             }
@@ -38,9 +39,9 @@ namespace WebApiShop.Controllers
 
        
         [HttpGet("{id}")]
-        public async Task<ActionResult<Order>> Get(int id)
+        public async Task<ActionResult<OrderDto>> Get(int id)
         {
-            Order order = await _orderService.GetOrderByid(id);
+            OrderDto order = await _orderService.GetOrderByid(id);
             if (order == null)
                 return NoContent();
             return Ok(order);

@@ -3,7 +3,7 @@ using Services;
 using Repository;
 using Entity;
 using System.Threading.Tasks;
-
+using DTOs;
 namespace WebApiShop.Controllers
 {
     [Route("api/[controller]")]
@@ -47,9 +47,9 @@ namespace WebApiShop.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> Get(int id)
+        public async Task<ActionResult<UserDto>> Get(int id)
         {
-            User user = await _userservice.GetUserByidService(id);
+            UserDto user = await _userservice.GetById(id);
             if (user == null)
                 return NoContent();
             return Ok(user);

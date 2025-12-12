@@ -2,6 +2,7 @@
 using Services;
 using Repository;
 using Entity;
+using DTOs;
 using System.Threading.Tasks;
 
 namespace WebApiShop.Controllers
@@ -20,10 +21,10 @@ namespace WebApiShop.Controllers
 
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<List<Category>>>Get()
+        public async Task<ActionResult<List<CatogeryDto>>> Get()
         {
-            List<Category> categories = await _catgoryService.GetCatogries();
-            if (categories == null)
+            List<CatogeryDto> categories = await _catgoryService.GetCatogries();
+            if (categories == null || categories.Count() == 0)
                 return NoContent();
             return Ok(categories);
         }
