@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Services
 {
-    public class PasswordService : Ipasswordservice
+    public class PasswordService : IPasswordService
     {
         public passwordEntity Level(string pass)
         {
@@ -17,6 +17,17 @@ namespace Services
             pass1.Password = pass;
             pass1.Strength = strength;
             return pass1;
+        }
+        private const int MIN_REQUIRED_STRENGTH = 3;
+        public bool UpdatePassword(int userId, string newPassword)
+        {
+            var strengthResult = Level(newPassword);
+
+            if (strengthResult.Strength < MIN_REQUIRED_STRENGTH)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

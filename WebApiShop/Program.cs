@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<Store_329391924Context>(options => options.UseSqlServer(
     "Data Source=srv2\\pupils;Initial Catalog=Store_329391924;Integrated Security=True;Trust Server Certificate=True; Pooling=False"));
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<Ipasswordservice, PasswordService>();
+builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddScoped<IUserservice, UserService>();
 builder.Services.AddScoped<ICatogeryRepsitory, CatogeryRepsitory>();
 builder.Services.AddScoped<ICatgoryService,CatgoryService> ();

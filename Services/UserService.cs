@@ -9,10 +9,10 @@ namespace Services
     public class UserService : IUserservice
     {
         IUserRepository _IuserRepository;
-        Ipasswordservice _Ipasswordservice;
+        IPasswordService _Ipasswordservice;
         IMapper _imapper;
 
-        public UserService(IUserRepository userRepository, Ipasswordservice passwordservice, IMapper imapper)
+        public UserService(IUserRepository userRepository, IPasswordService passwordservice, IMapper imapper)
         {
             _IuserRepository = userRepository;
             _Ipasswordservice = passwordservice;
@@ -22,13 +22,13 @@ namespace Services
         public async Task<IEnumerable<UserDto>> GetUsers()
         {
             IEnumerable<User> users = await _IuserRepository.GetUsers();
-            IEnumerable<UserDto> usersDto = _imapper.Map<IEnumerable<UserDto>>(users);
+            IEnumerable<UserDto> usersDto = _imapper.Map<IEnumerable<User>,IEnumerable<UserDto>>(users);
             return usersDto;
         }
         public async Task<UserDto> GetById(int id)
         {
             User user = await _IuserRepository.GetById(id);
-            UserDto userDto = _imapper.Map<UserDto>(user);
+            UserDto userDto = _imapper.Map<User,UserDto>(user);
             return userDto;
         }
 

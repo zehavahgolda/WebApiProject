@@ -22,7 +22,7 @@ namespace Services
             int? Catogery_Id, string? description)
         {
             IEnumerable<Product> products = await _productRepository.GetProducts(Product_Id, name, price, Catogery_Id, description);
-            IEnumerable<ProductDto> productDtos = _imapper.Map<IEnumerable<ProductDto>>(products);
+            IEnumerable<ProductDto> productDtos = _imapper.Map<IEnumerable<Product>, IEnumerable<ProductDto> >(products);
             return productDtos;
         }
 

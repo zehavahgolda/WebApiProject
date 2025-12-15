@@ -10,14 +10,14 @@ namespace WebApiShop.Controllers
     [ApiController]
     public class PasswordsController : ControllerBase
     {
-        Ipasswordservice _passwordservice;//
+        IPasswordService _passwordservice;//
 
-        public PasswordsController(Ipasswordservice passwordservice)
+        public PasswordsController(IPasswordService passwordservice)
         {
             _passwordservice = passwordservice;
         }
 
- 
+
         [HttpGet]
         public void Get(string pass)
         {
@@ -44,16 +44,30 @@ namespace WebApiShop.Controllers
 
         // PUT api/<passworsController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string newPassword)
+        public IActionResult Put(int id, [FromBody] string newPassword)
         {
-          
-        }
+            if (string.IsNullOrEmpty(newPassword))
+            {
+                return BadRequest("הסיסמה החדשה לא יכולה להיות ריקה.");
+            }
 
-        // DELETE api/<passworsController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            bool isUpdated = _passwordservice.UpdatePassword(id, newPassword);
 
+            if (isUpdated)
+            {
+                return Ok($"הסיסמה למשתמש {id} עודכנה בהצלחה.");
+            }
+            else
+            {
+                return BadRequest("הסיסמה שנבחרה חלשה מדי. נדרש חוזק של 3 ומעלה.");
+            }
+
+            // DELETE api/<passworsController>/5
+            //[HttpDelete("{id}")]
+            //public void Delete(int id)
+            //{
+
+            //}
         }
     }
 }

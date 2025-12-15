@@ -2,8 +2,9 @@
 
 namespace Services
 {
-    public interface Ipasswordservice
+    public interface IPasswordService
     {
         passwordEntity Level(string pass);
+        bool UpdatePassword(int userId, string newPassword);
     }
 }

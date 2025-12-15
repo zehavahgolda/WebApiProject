@@ -20,7 +20,7 @@ namespace Services
         public async Task<List<CatogeryDto>> GetCatogries()
         {
             List<Category> catogeryList = await _catgoryRepsitory.GetCatogries();
-            List<CatogeryDto> catogeryDto = _imapper.Map<List<CatogeryDto>>(catogeryList);
+            List<CatogeryDto> catogeryDto = _imapper.Map<List<Category>,List<CatogeryDto>>(catogeryList);
             return catogeryDto;
         }
 

@@ -21,7 +21,7 @@ namespace Services
         public async Task<OrderDto> GetOrderByid(int id)
         {
             Order order = await _orderRepository.GetOrderById(id);
-            OrderDto orderDto = _imapper.Map<OrderDto>(order);
+            OrderDto orderDto = _imapper.Map<Order,OrderDto>(order);
             return orderDto;
 
         }
@@ -30,7 +30,7 @@ namespace Services
         {
             Order ord = _imapper.Map<Order>(order);
             Order addedOrderDto = await _orderRepository.AddOrder(ord);
-            OrderDto orderDto = _imapper.Map<OrderDto>(addedOrderDto);
+            OrderDto orderDto = _imapper.Map<Order,OrderDto>(addedOrderDto);
             return orderDto;
         }
 

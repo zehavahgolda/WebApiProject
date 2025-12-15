@@ -12,6 +12,11 @@ async function new_user() {
         alert("אנא מלא את כל השדות");
         return;
     }
+    if (email.indexOf('@') === -1) {
+        alert("אנא הזן כתובת אימייל תקינה");
+        return;
+    }
+)
     const postData = { email, password, firstName, lastName };
 
     const response = await fetch(baseUrl, {
