@@ -16,7 +16,7 @@ async function new_user() {
         alert("אנא הזן כתובת אימייל תקינה");
         return;
     }
-)
+
     const postData = { email, password, firstName, lastName };
 
     const response = await fetch(baseUrl, {
@@ -60,12 +60,14 @@ async function login() {
 
 //עדכון משתמש
 async function up_date() {
+
+
     const user = JSON.parse(sessionStorage.getItem('user'));
     if (!user) {
         alert("לא נמצא משתמש מחובר");
         return;
     }
-
+  
     const userName = document.querySelector("#userName").value;
     const firstName = document.querySelector("#firstName").value;
     const lastName = document.querySelector("#lastName").value;
@@ -79,12 +81,12 @@ async function up_date() {
         body: JSON.stringify(data)
     });
 
-    if (response.ok) {
-        sessionStorage.setItem('user', JSON.stringify(data));
+        if (response.ok) {
         alert("הפרטים עודכנו בהצלחה");
-    } else {
-        alert("עדכון נכשל");
-    }
+       } else {
+           alert("עדכון נכשל");
+      }
+
 }
 
 
