@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository
+namespace DTOs
 {
-    public class passwordReposirory
-    {
-
-    }
+   public record UserDto
+   (
+    int Id,
+    string FirstName,
+    string LastName,
+    string Email
+   );
 }

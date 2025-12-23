@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository
+namespace DTOs
 {
-    public class passwordReposirory
-    {
-
-    }
+    public record CatogeryDto
+    (
+        int CatogeryId,
+        string CatogeryName
+    );
 }

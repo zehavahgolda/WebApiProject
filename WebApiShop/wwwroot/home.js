@@ -1,18 +1,23 @@
-﻿const baseUrl = "https://localhost:44382/api/Users";
+﻿const baseUrl = "https://localhost:44382/api/Users"; // שנה אם ה-API רץ על פורט אחר
 
 
 //משתמש חדש
 async function new_user() {
-    const userName = document.querySelector(".userName").value;
+    const email = document.querySelector(".userName").value;
     const password = document.querySelector(".password").value;
     const firstName = document.querySelector(".firstName").value;
     const lastName = document.querySelector(".lastName").value;
 
-    if (!userName || !password || !firstName || !lastName) {
+    if (!email || !password || !firstName || !lastName) {
         alert("אנא מלא את כל השדות");
         return;
     }
-    const postData = { userName, password, firstName, lastName };
+    if (email.indexOf('@') === -1) {
+        alert("אנא הזן כתובת אימייל תקינה");
+        return;
+    }
+
+    const postData = { email, password, firstName, lastName };
 
     const response = await fetch(baseUrl, {
         method: 'POST',
@@ -39,13 +44,15 @@ async function login() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(log)
     });
-
+    alert(response)
     if (response.ok) {
         const data = await response.json();
         sessionStorage.setItem('user', JSON.stringify(data));
         alert(`ברוך שובך, ${data.firstName || data.userName}!`);
-           window.location.href = "update.html"; 
-    } else {
+        window.location.href="update.html"
+    }
+    else
+    {
         alert("שם המשתמש או הסיסמה שגויים!");
     }
 }
@@ -53,12 +60,14 @@ async function login() {
 
 //עדכון משתמש
 async function up_date() {
+
+
     const user = JSON.parse(sessionStorage.getItem('user'));
     if (!user) {
         alert("לא נמצא משתמש מחובר");
         return;
     }
-
+  
     const userName = document.querySelector("#userName").value;
     const firstName = document.querySelector("#firstName").value;
     const lastName = document.querySelector("#lastName").value;
@@ -72,12 +81,12 @@ async function up_date() {
         body: JSON.stringify(data)
     });
 
-    if (response.ok) {
-        sessionStorage.setItem('user', JSON.stringify(data));
+        if (response.ok) {
         alert("הפרטים עודכנו בהצלחה");
-    } else {
-        alert("עדכון נכשל");
-    }
+       } else {
+           alert("עדכון נכשל");
+      }
+
 }
 
 
@@ -94,8 +103,8 @@ async function check_password() {
         });
         const dataPost = await response.json();
         const prog = document.querySelector(".progress");
-        prog.value = dataPost.strength * 25;
-        console.log(dataPost);
+    prog.value = dataPost.strength * 25;
+    console.log(dataPost);
         if (response.status == 200) {
             return dataPost.strength / 4;
         }

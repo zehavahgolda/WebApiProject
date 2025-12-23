@@ -10,12 +10,18 @@ namespace WebApiShop.Controllers
     [ApiController]
     public class PasswordsController : ControllerBase
     {
-        passwordservice _passwordservice = new passwordservice();
-        // GET: api/<passworsController>
+        IPasswordService _passwordservice;//
+
+        public PasswordsController(IPasswordService passwordservice)
+        {
+            _passwordservice = passwordservice;
+        }
+
+
         [HttpGet]
         public void Get(string pass)
         {
-            
+
         }
 
         // GET api/<passworsController>/5
@@ -29,23 +35,39 @@ namespace WebApiShop.Controllers
         [HttpPost]
         public ActionResult<passwordEntity> Post([FromBody] string value)
         {
-            passwordEntity _passwordEntity = _passwordservice.Level(value);
-            if (_passwordEntity == null)
+
+            passwordEntity resPas = _passwordservice.Level(value);
+            if (resPas == null)
                 return NoContent();
-            return Ok(_passwordEntity);
-         
+            return Ok(resPas);
         }
 
         // PUT api/<passworsController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, [FromBody] string newPassword)
         {
-        }
+            if (string.IsNullOrEmpty(newPassword))
+            {
+                return BadRequest("הסיסמה החדשה לא יכולה להיות ריקה.");
+            }
 
-        // DELETE api/<passworsController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            bool isUpdated = _passwordservice.UpdatePassword(id, newPassword);
+
+            if (isUpdated)
+            {
+                return Ok($"הסיסמה למשתמש {id} עודכנה בהצלחה.");
+            }
+            else
+            {
+                return BadRequest("הסיסמה שנבחרה חלשה מדי. נדרש חוזק של 3 ומעלה.");
+            }
+
+            // DELETE api/<passworsController>/5
+            //[HttpDelete("{id}")]
+            //public void Delete(int id)
+            //{
+
+            //}
         }
     }
 }

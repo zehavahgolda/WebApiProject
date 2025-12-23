@@ -1,63 +1,68 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-//using WebApiShop.Models;
 using Services;
-using Entity;
 using Repository;
-
+using Entity;
+using System.Threading.Tasks;
+using DTOs;
 namespace WebApiShop.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly string _filePath = "ListOfUsers.txt";
-        Userservice _userservice=new Userservice();
+        private readonly IUserservice _userservice;
+        private readonly ILogger<UsersController> _logger;
 
-        public UsersController()
+        public UsersController(IUserservice userservice, ILogger<UsersController> logger)
         {
-            if (!System.IO.File.Exists(_filePath))
-                System.IO.File.Create(_filePath).Close();
+
+            _userservice = userservice;
+            _logger = logger;
         }
 
         [HttpPost]
-        public ActionResult<User> Post([FromBody] User user)
+        public async Task<ActionResult<UserDto>> Post([FromBody] User user)
         {
-
-            User acceptedUser = _userservice.addUserServices(user);
+            User acceptedUser = await _userservice.addUserServices(user);
 
             if (acceptedUser == null)
             {
                 return BadRequest("סיסמא חלשה -נסה סיסמא שונה");
             }
-            return CreatedAtAction(nameof(Get), new { Id = acceptedUser.id }, acceptedUser);
+
+            return CreatedAtAction(nameof(Get), new { Id = acceptedUser.Id }, acceptedUser);
         }
 
         [HttpPost("Login")]
-        public ActionResult<User> Login([FromBody] User user)
+        public async Task<ActionResult<UserDto>> Login([FromBody] User user)
         {
-            user= _userservice.loginServices(user);
+            User _loggedUser = await _userservice.loginServices(user);
+            if (_loggedUser == null)
+            {
+                _logger.LogInformation("Login failed: UserName={UserName},FirstName={FirstName},LastName={LastName}", user?.UserName, user?.FirstName, user?.LastName);
+                return NoContent();
+            }
+            _logger.LogInformation("Login success: FirstName={FirstName},LastName={LastName}"
+            , _loggedUser.FirstName, _loggedUser.LastName);
+               
+            return Ok(_loggedUser);
+
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, [FromBody] User updatedUser)
+        {
+            await _userservice.update(updatedUser, id);
+            return NoContent();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<UserDto>> Get(int id)
+        {
+            UserDto user = await _userservice.GetById(id);
             if (user == null)
                 return NoContent();
             return Ok(user);
         }
-
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] User updatedUser)
-        {
-             _userservice.update(updatedUser, id);
-        }
-
-        [HttpGet("{id}")]
-        public ActionResult<User> Get(int id)
-        {
-            User user = _userservice.GetUserByidService(id);
-            if (user == null)  
-                return NoContent();
-            return Ok(user);
- 
-        }
-       
-        
     }
 }
