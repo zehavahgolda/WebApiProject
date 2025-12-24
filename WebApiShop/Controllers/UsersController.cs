@@ -36,16 +36,14 @@ namespace WebApiShop.Controllers
         [HttpPost("Login")]
         public async Task<ActionResult<UserDto>> Login([FromBody] User user)
         {
-            User _loggedUser = await _userservice.loginServices(user);
-            if (_loggedUser == null)
+            User _user = await _userservice.loginServices(user);
+            if (_user == null)
             {
-                _logger.LogInformation("Login failed: UserName={UserName},FirstName={FirstName},LastName={LastName}", user?.UserName, user?.FirstName, user?.LastName);
                 return NoContent();
             }
-            _logger.LogInformation("Login success: FirstName={FirstName},LastName={LastName}"
-            , _loggedUser.FirstName, _loggedUser.LastName);
+            _logger.LogInformation($"Login success: UserName={_user.Email},passord={_user.Password}");
                
-            return Ok(_loggedUser);
+            return Ok(_user);
 
         }
 
