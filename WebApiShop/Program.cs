@@ -2,6 +2,7 @@
 using Entity;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using NLog.Web;
 using Repository;
 using Services;
 using WebApiShop.Controllers;
@@ -20,6 +21,7 @@ builder.Services.AddScoped<IOrderrRepository, OrderrRepository>();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
 builder.Services.AddScoped<IProductservice,Productservice  > ();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Host.UseNLog();
 //builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddControllers();
 var app = builder.Build();
