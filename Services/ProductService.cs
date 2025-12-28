@@ -18,13 +18,15 @@ namespace Services
             _imapper = imapper;
         }
 
-        public async Task<IEnumerable<ProductDto>> GetProducts(int? Product_Id, string? name, float? price,
-            int? Catogery_Id, string? description)
+        public async Task<List<ProductDto>> GetProducts(int? Product_Id, string? name, float? price,
+           int? Catogery_Id, string? description)
         {
-            IEnumerable<Product> products = await _productRepository.GetProducts(Product_Id, name, price, Catogery_Id, description);
-            IEnumerable<ProductDto> productDtos = _imapper.Map<IEnumerable<Product>, IEnumerable<ProductDto> >(products);
+            List<Product> products = await _productRepository.GetProducts(Product_Id, name, price, Catogery_Id, description);
+            List<ProductDto> productDtos = _imapper.Map<List<Product>, List<ProductDto>>(products);
             return productDtos;
         }
+        
+
 
 
     }

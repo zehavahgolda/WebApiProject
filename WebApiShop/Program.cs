@@ -8,6 +8,7 @@ using Services;
 using WebApiShop.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
+
 //builder.Services.AddScoped<IPasswordsController, PasswordsController>();
 builder.Services.AddDbContext<Store_329391924Context>(options => options.UseSqlServer(
      builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -21,17 +22,26 @@ builder.Services.AddScoped<IOrderrRepository, OrderrRepository>();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
 builder.Services.AddScoped<IProductservice,Productservice  > ();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Host.UseNLog();
+
 //builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddOpenApi();
+
 builder.Services.AddControllers();
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<Store_329391924Context>();
+    context.Database.EnsureCreated();
+}
+//builder.Host.UseNLog();
 
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    app.UseSwaggerUI(Options =>
+    app.UseSwaggerUI(options =>
     {
-        Options.SwaggerEndpoint("/openapi/v1.json", "My API V1");
+       options.SwaggerEndpoint("/openapi/v1.json", "My API V1");
     });
 }
 

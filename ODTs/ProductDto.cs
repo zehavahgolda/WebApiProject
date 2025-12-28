@@ -9,9 +9,9 @@ namespace DTOs
     public record ProductDto
         (
         int ProductId,
-        string ProductName,
-        Double Price,
-        string Catogeryname,
+        string? ProductName,
+        double? Price,
+       // string Catogeryname,
         string Description
         );
    

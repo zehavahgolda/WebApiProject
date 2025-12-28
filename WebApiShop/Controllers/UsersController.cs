@@ -10,12 +10,11 @@ namespace WebApiShop.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly IUserservice _userservice;
-        private readonly ILogger<UsersController> _logger;
+        private IUserservice _userservice;
+        private ILogger<UsersController> _logger;
 
         public UsersController(IUserservice userservice, ILogger<UsersController> logger)
         {
-
             _userservice = userservice;
             _logger = logger;
         }
@@ -44,7 +43,6 @@ namespace WebApiShop.Controllers
             _logger.LogInformation($"Login success: UserName={_user.Email},passord={_user.Password}");
                
             return Ok(_user);
-
         }
 
         [HttpPut("{id}")]
