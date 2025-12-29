@@ -13,23 +13,22 @@ namespace Tests
 {
     public class DatabaseFixture : IDisposable
     {
-        public MyShopContext Context { get; private set; }
+        public Store_329391924Context  Context { get; private set; }
 
         public DatabaseFixture()
         {
 
-            // Set up the test database connection and initialize the context
-            var options = new DbContextOptionsBuilder<MyShopContext>()
+            var options = new DbContextOptionsBuilder<Store_329391924Context>()
 
-                .UseSqlServer("Data Source=srv2\\pupils;Initial Catalog=Store_329391924;Integrated Security=True;Trust Server Certificate=True; Pooling=False")
+                .UseSqlServer("Server=desktop-t8jm6mu; Database=Store_329391924Context; Integrated Security=True; TrustServerCertificate=True;")
                 .Options;
-            Context = new MyShopContext(options);
+            Context = new Store_329391924Context(options);
             Context.Database.EnsureCreated();
         }
 
         public void Dispose()
         {
-            // Clean up the test database after all tests are completed
+         
             Context.Database.EnsureDeleted();
             Context.Dispose();
         }

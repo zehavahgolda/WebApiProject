@@ -9,10 +9,16 @@ namespace Repository;
 
 public partial class Store_329391924Context : DbContext
 {
-    public Store_329391924Context(DbContextOptions<Store_329391924Context> options)
-        : base(options)
-    {
-    }
+
+  
+        public Store_329391924Context(DbContextOptions<Store_329391924Context> options)
+            : base(options)
+        {
+        }
+
+    
+
+
 
     public virtual DbSet<Category> Categories { get; set; }
 
