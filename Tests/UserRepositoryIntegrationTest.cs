@@ -2,6 +2,7 @@
 using Repository;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Tests;
 using Xunit;
 
 namespace RepositoryIntegrationTests

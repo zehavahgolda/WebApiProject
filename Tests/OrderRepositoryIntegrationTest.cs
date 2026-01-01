@@ -1,7 +1,7 @@
 ﻿using Entity;
-using Microsoft.EntityFrameworkCore;
 using Repository;
 using System.Threading.Tasks;
+using Tests;
 using Xunit;
 
 namespace RepositoryIntegrationTests
@@ -12,7 +12,7 @@ namespace RepositoryIntegrationTests
 
         public OrderrRepositoryIntegrationTests(DatabaseFixture fixture)
         {
-            _context = fixture.CreateContext();
+            _context = fixture.Context;
         }
 
         [Fact]
@@ -20,16 +20,17 @@ namespace RepositoryIntegrationTests
         {
             // Arrange
             var repository = new OrderrRepository(_context);
-            var order = new Order { OrderId = 3};
+            var order = new Order { OredrDate = DateOnly.FromDateTime(DateTime.Now), OrderSum = 200.0, UserId = 3 };
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
 
             // Act
-            var result = await repository.GetOrderById(3);
+            var result = await repository.GetOrderById(order.OrderId);
 
             // Assert
             Assert.NotNull(result);
             Assert.Equal(order.OrderId, result.OrderId);
+            Assert.Equal(order.OrderSum, result.OrderSum);
         }
 
         [Fact]
@@ -37,39 +38,15 @@ namespace RepositoryIntegrationTests
         {
             // Arrange
             var repository = new OrderrRepository(_context);
-            var order = new Order { OrderId = 4 };
+            var order = new Order { OredrDate = DateOnly.FromDateTime(DateTime.Now), OrderSum = 250.0, UserId = 4 };
 
             // Act
-            await repository.AddOrder(order);
+            var result = await repository.AddOrder(order);
 
             // Assert
-            var result = await _context.Orders.FindAsync(4);
-            Assert.NotNull(result);
-            Assert.Equal(order.OrderId, result.OrderId);
-        }
-    }
-
-    public class DatabaseFixture
-    {
-        public Store_329391924Context? Context { get; private set; }
-
-        public DatabaseFixture()
-        {
-            var options = new DbContextOptionsBuilder<Store_329391924Context>()
-        .UseSqlServer("Server=desktop-t8jm6mu; Database=Store_329391924; Integrated Security=True; TrustServerCertificate=True;")
-        .Options;
-
-            Context = new Store_329391924Context(options);
-            Context.Database.EnsureCreated();
-        }
-        public void Dispose()
-        {
-            Context.Dispose();
-        }
-
-        internal Store_329391924Context? CreateContext()
-        {
-            throw new NotImplementedException();
+            var retrievedOrder = await _context.Orders.FindAsync(result.OrderId);
+            Assert.NotNull(retrievedOrder);
+            Assert.Equal(order.OrderSum, retrievedOrder.OrderSum);
         }
     }
 }

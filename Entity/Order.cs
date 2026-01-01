@@ -18,4 +18,5 @@ public partial class Order
     public virtual ICollection<OrdeItem> OrdeItems { get; set; } = new List<OrdeItem>();
 
     public virtual User User { get; set; }
+
 }
