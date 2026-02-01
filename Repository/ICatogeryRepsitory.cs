@@ -2,8 +2,8 @@
 
 namespace Repository
 {
-    public interface ICatogeryRepsitory
+    public interface ICategoryRepository
     {
-        Task<List<Category>> GetCatogries();
+        Task<List<Category>> GetCategories();
     }
 }

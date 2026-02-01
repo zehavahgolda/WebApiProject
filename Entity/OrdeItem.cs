@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Entity;
 
-public partial class OrdeItem
+public partial class OrderItem
 {
     public int OrderItemId { get; set; }
 

@@ -14,13 +14,13 @@ builder.Services.AddDbContext<Store_329391924Context>(options => options.UseSqlS
      builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
-builder.Services.AddScoped<IUserservice, UserService>();
-builder.Services.AddScoped<ICatogeryRepsitory, CatogeryRepsitory>();
-builder.Services.AddScoped<ICatgoryService,CatgoryService> ();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IOrderService,OrderService> ();
 builder.Services.AddScoped<IOrderrRepository, OrderrRepository>();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
-builder.Services.AddScoped<IProductservice,Productservice  > ();
+builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 //builder.Services.AddAutoMapper(typeof(Program));

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DTOs
 {
-    public record CatogeryDto
+    public record CategoryDto
     (
-        int CatogeryId,
-        string CatogeryName
+        int CategoryId,
+        string CategoryName
     );
 }

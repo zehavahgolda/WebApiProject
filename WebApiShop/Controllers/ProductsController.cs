@@ -11,11 +11,11 @@ namespace WebApiShop.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IProductservice _productservice;
+        private readonly IProductService _productService;
 
-        public ProductsController(IProductservice productservice)
+        public ProductsController(IProductService productService)
         {
-            _productservice = productservice;
+            _productService = productService;
         }
 
         [HttpGet]
@@ -23,7 +23,7 @@ namespace WebApiShop.Controllers
         [FromQuery] int? minPrice,[FromQuery] int? maxPrice, [FromQuery] string? description, [FromQuery] int position = 1,
     [   FromQuery] int skip = 8)
         {
-            FinalProducts result = await _productservice.GetProducts(name, categories, minPrice, maxPrice, description, position, skip);
+            FinalProducts result = await _productService.GetProducts(name, categories, minPrice, maxPrice, description, position, skip);
             if (result == null || result.Items.Count == 0)
             {
                 return NoContent();
