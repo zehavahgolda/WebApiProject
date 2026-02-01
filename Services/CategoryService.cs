@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace Services
 {
-    public class CatgoryService : ICatgoryService
+    public class CategoryService : ICategoryService
     {
-        ICatogeryRepsitory _catgoryRepsitory;
+        ICategoryRepository _categoryRepository;
         IMapper _imapper;
 
-        public CatgoryService(ICatogeryRepsitory catgoryService, IMapper imapper)
+        public CategoryService(ICategoryRepository categoryRepository, IMapper imapper)
         {
-            _catgoryRepsitory = catgoryService;
+            _categoryRepository = categoryRepository;
             _imapper = imapper;
         }
 
-        public async Task<List<CatogeryDto>> GetCatogries()
+        public async Task<List<CategoryDto>> GetCategories()
         {
-            List<Category> catogeryList = await _catgoryRepsitory.GetCatogries();
-            List<CatogeryDto> catogeryDto = _imapper.Map<List<Category>,List<CatogeryDto>>(catogeryList);
-            return catogeryDto;
+            List<Category> categoryList = await _categoryRepository.GetCategories();
+            List<CategoryDto> categoryDto = _imapper.Map<List<Category>,List<CategoryDto>>(categoryList);
+            return categoryDto;
         }
 
     }

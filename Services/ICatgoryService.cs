@@ -2,8 +2,8 @@
 
 namespace Services
 {
-    public interface ICatgoryService
+    public interface ICategoryService
     {
-        Task<List<CatogeryDto>> GetCatogries();
+        Task<List<CategoryDto>> GetCategories();
     }
 }

@@ -9,11 +9,11 @@ using Entity;
 
 namespace Services
 {
-    public class AoutoMapper:Profile
+    public class AutoMapper:Profile
     {
-        public AoutoMapper()
+        public AutoMapper()
         {
-            CreateMap<Category, CatogeryDto>().ReverseMap();
+            CreateMap<Category, CategoryDto>().ReverseMap();
             CreateMap<Order, OrderDto>().ReverseMap();
             CreateMap<Product, ProductDto>().ReverseMap();
             CreateMap<User, UserDto>().ReverseMap();

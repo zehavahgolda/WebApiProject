@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class passwordEntity
+    public class PasswordEntity
     {
         public string? Password { get; set; }
         public int Strength { get; set; }

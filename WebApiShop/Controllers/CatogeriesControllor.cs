@@ -9,21 +9,21 @@ namespace WebApiShop.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CatogerisController : ControllerBase
+    public class CategoriesController : ControllerBase
     {
-        ICatgoryService _catgoryService;
+        ICategoryService _categoryService;
 
-        public CatogerisController(ICatgoryService _catgoryService)
+        public CategoriesController(ICategoryService categoryService)
         {
-            _catgoryService = _catgoryService;
+            _categoryService = categoryService;
         }
 
 
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<List<CatogeryDto>>> Get()
+        [HttpGet]
+        public async Task<ActionResult<List<CategoryDto>>> Get()
         {
-            List<CatogeryDto> categories = await _catgoryService.GetCatogries();
+            List<CategoryDto> categories = await _categoryService.GetCategories();
             if (categories == null || categories.Count() == 0)
                 return NoContent();
             return Ok(categories);

@@ -10,19 +10,19 @@ namespace WebApiShop.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private IUserservice _userservice;
+        private IUserService _userService;
         private ILogger<UsersController> _logger;
 
-        public UsersController(IUserservice userservice, ILogger<UsersController> logger)
+        public UsersController(IUserService userService, ILogger<UsersController> logger)
         {
-            _userservice = userservice;
+            _userService = userService;
             _logger = logger;
         }
 
         [HttpPost]
         public async Task<ActionResult<UserDto>> Post([FromBody] User user)
         {
-            User acceptedUser = await _userservice.addUserServices(user);
+            User acceptedUser = await _userService.addUserServices(user);
 
             if (acceptedUser == null)
             {
@@ -35,7 +35,7 @@ namespace WebApiShop.Controllers
         [HttpPost("Login")]
         public async Task<ActionResult<UserDto>> Login([FromBody] User user)
         {
-            User _user = await _userservice.loginServices(user);
+            User _user = await _userService.loginServices(user);
             if (_user == null)
             {
                 return NoContent();
@@ -48,14 +48,14 @@ namespace WebApiShop.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] User updatedUser)
         {
-            await _userservice.update(updatedUser, id);
+            await _userService.update(updatedUser, id);
             return NoContent();
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<UserDto>> Get(int id)
         {
-            UserDto user = await _userservice.GetById(id);
+            UserDto user = await _userService.GetById(id);
             if (user == null)
                 return NoContent();
             return Ok(user);
