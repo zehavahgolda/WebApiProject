@@ -35,6 +35,10 @@ namespace Services
             };
 
         }
+        public async Task<Product> GetProductById(int id)
+        {
+            return await _productRepository.GetProductById(id);
+        }
 
 
 

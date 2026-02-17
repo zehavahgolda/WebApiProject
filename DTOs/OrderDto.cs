@@ -12,9 +12,10 @@ namespace DTOs
         DateOnly OredrDate,
         int OrderSum,
         string UserFirstName,
-        string UserlastName 
-    );
+        string UserlastName
+    )
+    {
 
-
-
+        public OrderDto() : this(0, DateOnly.FromDateTime(DateTime.Now), 0, "", "") { }
+    }
 }

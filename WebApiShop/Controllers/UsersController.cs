@@ -35,6 +35,7 @@ namespace WebApiShop.Controllers
         [HttpPost("Login")]
         public async Task<ActionResult<UserDto>> Login([FromBody] User user)
         {
+            _logger.LogInformation($"Attempting login for: Email='{user.Email}', Password='{user.Password}'");
             User _user = await _userservice.loginServices(user);
             if (_user == null)
             {

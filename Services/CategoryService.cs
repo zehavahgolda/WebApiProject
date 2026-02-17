@@ -8,10 +8,10 @@ namespace Services
 {
     public class CatgoryService : ICatgoryService
     {
-        ICatogeryRepsitory _catgoryRepsitory;
+        ICategoryRepository _catgoryRepsitory;
         IMapper _imapper;
 
-        public CatgoryService(ICatogeryRepsitory catgoryService, IMapper imapper)
+        public CatgoryService(ICategoryRepository catgoryService, IMapper imapper)
         {
             _catgoryRepsitory = catgoryService;
             _imapper = imapper;
@@ -23,6 +23,19 @@ namespace Services
             List<CatogeryDto> catogeryDto = _imapper.Map<List<Category>,List<CatogeryDto>>(catogeryList);
             return catogeryDto;
         }
+
+        //public async Task<CatogeryDto> GetCategoryById(int id)
+        //{
+        //    var category = await _catgoryRepsitory.GetByIdAsync(id);
+
+        //    if (category == null) return null;
+
+        //    return new CatogeryDto
+        //    {
+        //        Id = category.CatogeryId,
+        //        Name = category.CatogeryName
+        //    };
+        //}
 
     }
 }

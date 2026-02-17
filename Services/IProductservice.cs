@@ -1,4 +1,5 @@
 ﻿using DTOs;
+using Entity;
 
 namespace Services
 {
@@ -6,5 +7,6 @@ namespace Services
     {
         public Task<FinalProducts> GetProducts(string? name, int?[] categories, int? minPrice, int? maxPrice,
              string? description, int? position, int? skip);
+        Task<Product> GetProductById(int id);
     }
 }

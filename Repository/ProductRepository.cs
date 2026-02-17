@@ -31,7 +31,12 @@ namespace Repository
                  .ToListAsync();
             return (products, totalCount);
         }
-
+        public async Task<Product> GetProductById(int id)
+        {
+            return await _store_329391924Context.Products
+                .Include(p => p.Category) // כדי שתקבלי גם את פרטי הקטגוריה אם צריך
+                .FirstOrDefaultAsync(p => p.ProductId == id);
+        }
 
     }
 }

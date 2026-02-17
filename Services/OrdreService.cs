@@ -1,16 +1,15 @@
-﻿using Repository;
-using Entity    ;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using DTOs;
+using Entity;
+using Repository;
+using System.Threading.Tasks;
 
 namespace Services
 {
     public class OrderService : IOrderService
     {
-        IOrderrRepository _orderRepository;
-        IMapper _imapper;
-
+        private readonly IOrderrRepository _orderRepository;
+        private readonly IMapper _imapper;
 
         public OrderService(IOrderrRepository orderRepository, IMapper imapper)
         {
@@ -21,19 +20,23 @@ namespace Services
         public async Task<OrderDto> GetOrderByid(int id)
         {
             Order order = await _orderRepository.GetOrderById(id);
-            OrderDto orderDto = _imapper.Map<Order,OrderDto>(order);
+            OrderDto orderDto = _imapper.Map<OrderDto>(order);
             return orderDto;
-
         }
 
         public async Task<OrderDto> addOrder(Order order)
         {
-            Order ord = _imapper.Map<Order>(order);
-            Order addedOrderDto = await _orderRepository.AddOrder(ord);
-            OrderDto orderDto = _imapper.Map<Order,OrderDto>(addedOrderDto);
+            Order addedOrder = await _orderRepository.AddOrder(order);
+            OrderDto orderDto = _imapper.Map<OrderDto>(addedOrder);
             return orderDto;
         }
 
 
+        public async Task<IEnumerable<OrderDto>> GetAllOrders()
+        {
+            IEnumerable<Order> orders = await _orderRepository.GetAllOrders();
+            IEnumerable<OrderDto> ordersDto = _imapper.Map<IEnumerable<OrderDto>>(orders);
+            return ordersDto;
+        }
     }
 }

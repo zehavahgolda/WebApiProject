@@ -11,8 +11,11 @@ namespace DTOs
         int ProductId,
         string? ProductName,
         double? Price,
-       // string Catogeryname,
+        string Catogeryname,
         string Description
-        );
-   
+        )
+    {
+       
+        public ProductDto() : this(0, null, null, "", "") { }
+    }
 }

@@ -2,8 +2,10 @@
 
 namespace Repository
 {
-    public interface ICatogeryRepsitory
+    public interface ICategoryRepository
     {
         Task<List<Category>> GetCatogries();
+        //Task<Category> GetByIdAsync(int id);
     }
+    
 }

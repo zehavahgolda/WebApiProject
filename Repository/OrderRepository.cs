@@ -22,6 +22,10 @@ namespace Repository
             await _store_329391924Context.SaveChangesAsync();
             return order;
         }
+        public async Task<IEnumerable<Order>> GetAllOrders()
+        {
+            return await _store_329391924Context.Orders.ToListAsync();
+        }
 
     }
 }

@@ -1,38 +1,48 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Services;
-using Repository;
-using Entity;
-using System.Threading.Tasks;
+﻿using AutoMapper;
 using DTOs;
+using Entity;
+using Microsoft.AspNetCore.Mvc;
+using Services;
 
-namespace WebApiShop.Controllers
+[Route("api/[controller]")]
+[ApiController]
+public class ProductsController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ProductsController : ControllerBase
+    private readonly IProductservice _productservice;
+    private readonly IMapper _mapper;
+
+    // הוספתי את ה-IMapper כפרמטר בתוך הסוגריים של הבנאי
+    public ProductsController(IProductservice productservice, IMapper mapper)
     {
-        private readonly IProductservice _productservice;
+        _productservice = productservice;
+        _mapper = mapper; // השורה הזו היא הקריטית! היא מאתחלת את המפר
+    }
 
-        public ProductsController(IProductservice productservice)
+    [HttpGet]
+    public async Task<ActionResult<FinalProducts>> Get([FromQuery] string? name, [FromQuery] int?[] categories,
+    [FromQuery] int? minPrice, [FromQuery] int? maxPrice, [FromQuery] string? description, [FromQuery] int position = 1,
+    [FromQuery] int skip = 8)
+    {
+        FinalProducts result = await _productservice.GetProducts(name, categories, minPrice, maxPrice, description, position, skip);
+
+        if (result == null || result.Items.Count == 0)
         {
-            _productservice = productservice;
+            return NoContent();
         }
 
-        [HttpGet]
-        public async Task<ActionResult<FinalProducts>> Get([FromQuery] string? name, [FromQuery] int?[] categories,
-        [FromQuery] int? minPrice,[FromQuery] int? maxPrice, [FromQuery] string? description, [FromQuery] int position = 1,
-    [   FromQuery] int skip = 8)
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<ProductDto>> GetById(int id)
+    {
+        var product = await _productservice.GetProductById(id);
+
+        if (product == null)
         {
-            FinalProducts result = await _productservice.GetProducts(name, categories, minPrice, maxPrice, description, position, skip);
-            if (result == null || result.Items.Count == 0)
-            {
-                return NoContent();
-            }
-
-            return Ok(result);
+            return NotFound();
         }
-
-
+        var productDto = _mapper.Map<Product, ProductDto>(product);
+        return Ok(productDto);
     }
 }
-

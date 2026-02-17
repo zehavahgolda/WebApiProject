@@ -32,15 +32,21 @@ namespace Repository
 
         public async Task UpdateUser(int id, User user)
         {
+            
+            user.Id = id;
+
             _store_329391924Context.Users.Update(user);
             await _store_329391924Context.SaveChangesAsync();
         }
 
         public async Task<User> Login(User user)
         {
+            string email = user.Email.Trim();
+            string password = user.Password.Trim();
+
             return await _store_329391924Context.Users
-                .FirstOrDefaultAsync(x => x.Email == user.Email &&
-                                          x.Password == user.Password);
+                .FirstOrDefaultAsync(x => x.Email.Trim() == email &&
+                                           x.Password.Trim() == password);
         }
     }
 }

@@ -18,10 +18,10 @@ namespace WebApiShop.Controllers
             _orderService = orderService;
         }
         [HttpGet]
-        public IEnumerable<string> Get()
+        
+        public async Task<IEnumerable<OrderDto>> Get()
         {
-            return new string[] { "value1", "value2" };
-    
+            return await _orderService.GetAllOrders();
         }
 
         [HttpPost]

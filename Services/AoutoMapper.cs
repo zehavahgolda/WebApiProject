@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DTOs;
-using AutoMapper;
-using Entity;
+﻿using AutoMapper;
+using Entity;  // כדי להכיר את Category, Order וכו'
+using DTOs;    // כדי להכיר את CatogeryDto, OrderDto וכו'
 
-namespace Services
+namespace Services // המיקום הלוגי הנכון
 {
-    public class AoutoMapper:Profile
+    public class AutoMapperProfile : Profile // תיקנתי גם את שם המחלקה לסטנדרט
     {
-        public AoutoMapper()
+        public AutoMapperProfile()
         {
+            // שים לב ששמות ה-DTOs חייבים להיות קיימים בפרויקט DTOs
             CreateMap<Category, CatogeryDto>().ReverseMap();
             CreateMap<Order, OrderDto>().ReverseMap();
             CreateMap<Product, ProductDto>().ReverseMap();
             CreateMap<User, UserDto>().ReverseMap();
         }
     }
-
 }
