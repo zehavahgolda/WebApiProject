@@ -26,6 +26,26 @@ namespace Repository
         {
             return await _store_329391924Context.Orders.ToListAsync();
         }
+        public async Task<IEnumerable<Order>> GetOrdersByUserId(int userId)
+        {
+            return await _store_329391924Context.Orders
+                .Include(o => o.User)              
+                .Include(o => o.OrdeItems)         
+                    .ThenInclude(oi => oi.Product)  
+                .Where(order => order.UserId == userId)
+                .ToListAsync();
+        }
 
+
+        public async Task UpdateStatus(int id, string status)
+        {
+          
+            var order = await _store_329391924Context.Orders.FindAsync(id);
+            if (order != null)
+            {
+                order.OrderStatus = status;
+                await _store_329391924Context.SaveChangesAsync();
+            }
+        }
     }
 }

@@ -9,6 +9,6 @@ namespace Services
         Task<UserDto> GetById(int id);
         Task<IEnumerable<UserDto>> GetUsers();
         Task<User> loginServices(User user);
-        Task update(User user, int id);
+        Task update(UserDto userDto, int id); 
     }
 }

@@ -46,8 +46,10 @@ namespace Services
             return await _IuserRepository.Login(user);
         }
 
-        public async Task update(User user, int id)
+        public async Task update(UserDto userDto, int id)
         {
+            
+            User user = _imapper.Map<User>(userDto);
             await _IuserRepository.UpdateUser(id, user);
         }
     }

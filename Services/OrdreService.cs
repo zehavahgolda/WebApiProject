@@ -38,5 +38,15 @@ namespace Services
             IEnumerable<OrderDto> ordersDto = _imapper.Map<IEnumerable<OrderDto>>(orders);
             return ordersDto;
         }
+        public async Task<IEnumerable<OrderDto>> GetOrdersByUserId(int userId)
+        {
+            var orders = await _orderRepository.GetOrdersByUserId(userId);
+            return _imapper.Map<IEnumerable<OrderDto>>(orders);
+        }
+        public async Task UpdateStatus(int id, string status)
+        {
+      
+            await _orderRepository.UpdateStatus(id, status);
+        }
     }
 }

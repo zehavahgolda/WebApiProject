@@ -46,5 +46,22 @@ namespace WebApiShop.Controllers
                 return NoContent();
             return Ok(order);
         }
+        [HttpGet("user/{userId}")]
+        public async Task<ActionResult<IEnumerable<OrderDto>>> GetByUserId(int userId)
+        {
+            var orders = await _orderService.GetOrdersByUserId(userId);
+            if (orders == null)
+            {
+                return NotFound();
+            }
+            return Ok(orders);
+        }
+
+        [HttpPut("status/{id}")]
+        public async Task<IActionResult> UpdateStatus(int id, [FromBody] string status)
+        {
+            await _orderService.UpdateStatus(id, status);
+            return NoContent();
+        }
     }
 }

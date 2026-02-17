@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace DTOs
 {
-  public record OrderItemDto
-   (
-      int OrderItemId,
-      string ProductName,
-      int OrderId,
-      double? Quantity
-   );
+    public record OrderItemDto
+    (
+        int ProductId,
+        string ProductName,
+        int Quantity,
+        double Price
+    )
+    {
+           public OrderItemDto() : this(0, "", 0, 0) { }
+    }
 }

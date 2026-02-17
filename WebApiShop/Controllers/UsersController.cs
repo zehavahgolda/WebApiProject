@@ -47,11 +47,15 @@ namespace WebApiShop.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] User updatedUser)
+        public async Task<IActionResult> Put(int id, [FromBody] UserDto userDto)
         {
-            await _userservice.update(updatedUser, id);
+            await _userservice.update(userDto, id);
             return NoContent();
         }
+
+
+
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<UserDto>> Get(int id)
@@ -61,5 +65,8 @@ namespace WebApiShop.Controllers
                 return NoContent();
             return Ok(user);
         }
+
+
+       
     }
 }

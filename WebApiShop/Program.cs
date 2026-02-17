@@ -1,24 +1,21 @@
-﻿using AutoMapper;
-
-using Microsoft.EntityFrameworkCore;
-using Services;
+﻿using Microsoft.EntityFrameworkCore;
 using Repository;
-using Entity;
-
+using Services;
+using WebApiShop;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddCors(options => {
     options.AddPolicy("CorsPolicy", policy =>
-        policy.WithOrigins("http://localhost:4200") 
+        policy.WithOrigins("http://localhost:4200")
               .AllowAnyHeader()
               .AllowAnyMethod());
 });
 
-
 builder.Services.AddDbContext<Store_329391924Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddScoped<ICategoryRepository, CatogeryRepsitory>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserservice, UserService>();
@@ -28,29 +25,32 @@ builder.Services.AddScoped<ICatgoryService, CatgoryService>();
 builder.Services.AddScoped<IOrderrRepository, OrderrRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
+builder.Services.AddScoped<IRatingRepository, RatingRepository>();
+builder.Services.AddScoped<IRatingService, RatingService>();
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
-
 var app = builder.Build();
 
 
-
+app.UseMiddleware<ErrorMiddleware>();
+app.UseMiddleware<RatingMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json", "My API V1"));
+    app.UseSwaggerUI(options =>
+        options.SwaggerEndpoint("/openapi/v1.json", "My API V1"));
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-
 app.UseCors("CorsPolicy");
 
 app.UseAuthorization();
 app.MapControllers();
 
-app.Run(); 
+app.Run();

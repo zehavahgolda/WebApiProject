@@ -21,14 +21,13 @@ namespace RepositoryIntegrationTests
             // Arrange
             _dbContext.Categories.Add(new Category
             {
-                CatogeryId = 1,
-                CatogeryName = "Electronics"
+               
+                CategoryName = "Electronics" 
             });
 
             _dbContext.Categories.Add(new Category
             {
-                CatogeryId = 2,
-                CatogeryName = "Books"
+                CategoryName = "Books"
             });
 
             await _dbContext.SaveChangesAsync();
