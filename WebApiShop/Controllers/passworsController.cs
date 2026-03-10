@@ -18,20 +18,11 @@ namespace WebApiShop.Controllers
         }
 
 
-        [HttpGet]
-        public void Get(string pass)
-        {
+       
 
-        }
+        
 
-        // GET api/<passworsController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<passworsController>
+        
         [HttpPost]
         public ActionResult<passwordEntity> Post([FromBody] string value)
         {
@@ -42,7 +33,7 @@ namespace WebApiShop.Controllers
             return Ok(resPas);
         }
 
-        // PUT api/<passworsController>/5
+        
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] string newPassword)
         {
@@ -62,12 +53,7 @@ namespace WebApiShop.Controllers
                 return BadRequest("הסיסמה שנבחרה חלשה מדי. נדרש חוזק של 3 ומעלה.");
             }
 
-            // DELETE api/<passworsController>/5
-            //[HttpDelete("{id}")]
-            //public void Delete(int id)
-            //{
-
-            //}
+           
         }
     }
 }

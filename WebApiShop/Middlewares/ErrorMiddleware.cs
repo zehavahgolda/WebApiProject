@@ -25,8 +25,11 @@ namespace WebApiShop
             catch (Exception ex)
             {
                 _logger.LogError($"Something went wrong: {ex}");
-                httpContext.Response.StatusCode = 500;
-                await httpContext.Response.WriteAsync("Internal Server Error from the custom middleware.");
+                if (!httpContext.Response.HasStarted)
+                {
+                    httpContext.Response.StatusCode = 500;
+                    await httpContext.Response.WriteAsync("Internal Server Error from the custom middleware.");
+                }
             }
         }
     }

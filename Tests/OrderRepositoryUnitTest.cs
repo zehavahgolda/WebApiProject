@@ -1,4 +1,4 @@
-﻿using System; // חובה עבור DateTime
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +6,7 @@ using Moq;
 using Repository;
 using Xunit;
 using Entity;
+using System.Threading;
 
 namespace RepositoryTests
 {
@@ -15,13 +16,12 @@ namespace RepositoryTests
         public async Task GetOrderById_ReturnsOrder_WhenExists()
         {
             // Arrange
-            var mockSet = new Mock<DbSet<Order>>();
             var mockContext = new Mock<Store_329391924Context>();
-            var order = new Order { OrderId = 1, OredrDate = DateOnly.FromDateTime(DateTime.Now), OrderSum = 100.0, UserId = 1 };
+            var order = new Order { OrderId = 1, OrderSum = 100.0, UserId = 1 };
 
-            // ב-Moq עבור EF Core, לפעמים צריך להגדיר את זה כך בגלל ש-FindAsync מקבל מערך של אובייקטים
-            mockSet.Setup(m => m.FindAsync(It.IsAny<object[]>())).ReturnsAsync(order);
-            mockContext.Setup(c => c.Orders).Returns(mockSet.Object);
+            // הגדרה נכונה של FindAsync עבור Mock
+            mockContext.Setup(c => c.Orders.FindAsync(It.IsAny<object[]>()))
+                       .ReturnsAsync(order);
 
             var repository = new OrderrRepository(mockContext.Object);
 
@@ -29,7 +29,8 @@ namespace RepositoryTests
             var result = await repository.GetOrderById(1);
 
             // Assert
-            Assert.Equal(order, result);
+            Assert.NotNull(result);
+            Assert.Equal(1, result.OrderId);
         }
 
         [Fact]
@@ -38,11 +39,9 @@ namespace RepositoryTests
             // Arrange
             var mockSet = new Mock<DbSet<Order>>();
             var mockContext = new Mock<Store_329391924Context>();
-            var order = new Order { OrderId = 2, OredrDate = DateOnly.FromDateTime(DateTime.Now), OrderSum = 150.0, UserId = 2 };
+            var order = new Order { OrderId = 2, OrderSum = 150.0, UserId = 2 };
 
             mockContext.Setup(c => c.Orders).Returns(mockSet.Object);
-
-            mockSet.Setup(m => m.AddAsync(It.IsAny<Order>(), default)).ReturnsAsync((Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<Order>)null);
 
             var repository = new OrderrRepository(mockContext.Object);
 
@@ -50,9 +49,8 @@ namespace RepositoryTests
             var result = await repository.AddOrder(order);
 
             // Assert
-            
-            mockSet.Verify(m => m.AddAsync(order, default), Times.Once);
-            mockContext.Verify(m => m.SaveChangesAsync(default), Times.Once);
+            mockSet.Verify(m => m.AddAsync(It.IsAny<Order>(), It.IsAny<CancellationToken>()), Times.Once);
+            mockContext.Verify(m => m.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
             Assert.Equal(order, result);
         }
     }

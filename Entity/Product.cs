@@ -21,9 +21,11 @@ public partial class Product
 
     public string? Material { get; set; }
 
-    public short Quantity { get; set; }
+    public short? Quantity { get; set; }
 
-    public bool IsActive { get; set; }
+    public bool? IsActive { get; set; }
+
+    public string? ImgUrl2 { get; set; }
 
     public virtual Category? Category { get; set; }
 

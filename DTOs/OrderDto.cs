@@ -15,7 +15,7 @@ namespace DTOs
     string UserFirstName,
     string UserlastName,
     IEnumerable<OrderItemDto> OrderItems 
-    )
+)
     {
         public OrderDto() : this(0, DateOnly.FromDateTime(DateTime.Now), 0, "Paid", "", "", new List<OrderItemDto>()) { }
     }

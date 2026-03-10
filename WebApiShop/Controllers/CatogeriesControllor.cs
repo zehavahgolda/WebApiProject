@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Services;
-using Repository;
+﻿using DTOs;
+using DTOs.DTOs;
 using Entity;
-using DTOs;
+using Microsoft.AspNetCore.Mvc;
+using Repository;
+using Services;
 using System.Threading.Tasks;
 
 namespace WebApiShop.Controllers

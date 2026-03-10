@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Entity;
+﻿using Entity;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace Repository
@@ -26,26 +28,42 @@ namespace Repository
         public async Task<User> AddUser(User user)
         {
             await _store_329391924Context.Users.AddAsync(user);
+            if (string.IsNullOrEmpty(user.Role))
+            {
+                user.Role = "User";
+            }
+            await _store_329391924Context.SaveChangesAsync();
             await _store_329391924Context.SaveChangesAsync();
             return user;
         }
 
-        public async Task UpdateUser(int id, User user)
+        public async Task<ActionResult<User>> Put(int id, [FromBody] User updatedUser)
         {
-            user.Id = id;
-
-            _store_329391924Context.Users.Update(user);
+          
+            var existingUser = await _store_329391924Context.Users.FindAsync(id);
+            existingUser.FirstName = updatedUser.FirstName;
+            existingUser.LastName = updatedUser.LastName;
+            existingUser.Phone = updatedUser.Phone;
+            existingUser.Address = updatedUser.Address;
+           
             await _store_329391924Context.SaveChangesAsync();
+
+            return existingUser;
         }
-      
+
         public async Task<User> Login(User user)
         {
+          
+            if (user == null || string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password))
+            {
+                return null;
+            }
+
             string email = user.Email.Trim();
-            string password = user.Password.Trim();
+            string password = user.Password;
 
             return await _store_329391924Context.Users
-                .FirstOrDefaultAsync(x => x.Email.Trim() == email &&
-                                           x.Password.Trim() == password);
+                .FirstOrDefaultAsync(x => x.Email.Trim() == email && x.Password == password);
         }
     }
 }

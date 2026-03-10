@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DTOs;
 using Entity    ;
+using Microsoft.EntityFrameworkCore;
 using Repository;
 using System;
 using System.Threading.Tasks;
@@ -18,22 +19,22 @@ namespace Services
             _productRepository = productRepository;
             _imapper = imapper;
         }
-        public async Task<FinalProducts> GetProducts(string? name, int?[] categories, int? minPrice, int? maxPrice,
-            string? description, int? position, int? skip)
+       
+ public async Task<FinalProducts> GetProducts(int[]?categoryId, string? q, double? minPrice, double? maxPrice, string? color, string? material, bool? inStock, bool? isActive, string? sort, int? skip, int? position)
         {
-            int pageSize = skip ?? 8;
-            int currentPage = position ?? 1;
-            var result = await _productRepository.GetProducts(name, categories, minPrice, maxPrice, description, position, skip);
-            bool hasNext = (currentPage * pageSize) < result.TotalCount;
-            bool hasPrev = currentPage > 1;
-            return new FinalProducts
-            {
-                Items = _imapper.Map<List<Product>, List<ProductDto>>(result.Items),
-                TotalCount = result.TotalCount,
-                HasNext = hasNext,
-                HasPrev = hasPrev
-            };
+            var (products, total) = await _productRepository.GetProducts(
+                categoryId, q, minPrice, maxPrice, color, material,
+                inStock, isActive, sort, skip, position);
 
+            var itemsDto = _imapper.Map<List<ProductDto>>(products);
+
+            int pageSize = (skip.HasValue && skip.Value > 0) ? skip.Value : 8;
+            int page = (position.HasValue && position.Value > 0) ? position.Value : 1;
+
+            bool hasNext = (total - (page * pageSize)) > 0;
+            bool hasPrev = page > 1;
+
+            return new FinalProducts(itemsDto, total, hasNext, hasPrev);
         }
         public async Task<Product> GetProductById(int id)
         {
@@ -41,6 +42,21 @@ namespace Services
         }
 
 
+        public async Task<Product> AddProduct(Product product)
+        {
+            return await _productRepository.AddProduct(product);
+        }
+
+        public async Task<Product> UpdateProduct(int id, Product product)
+        {
+            return await _productRepository.UpdateProduct(id, product);
+        }
+
+        public async Task DeleteProduct(int id)
+        {
+         
+            await _productRepository.DeleteProduct(id);
+        }
 
     }
 }

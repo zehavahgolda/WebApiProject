@@ -20,5 +20,5 @@ public partial class User
     public string? Address { get; set; }
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
-    public string Role { get; set; }
+    public string? Role { get; set; }
 }

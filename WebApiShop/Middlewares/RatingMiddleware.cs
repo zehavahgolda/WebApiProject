@@ -24,7 +24,7 @@ public class RatingMiddleware
             Path = context.Request.Path,
             Referer = context.Request.Headers["Referer"].ToString(),
             UserAgent = context.Request.Headers["User-Agent"].ToString(),
-            RecordDate = DateTime.Now
+            Record_Date = DateTime.Now
         };
 
         await ratingService.AddRatingAsync(rating);

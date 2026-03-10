@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace DTOs
 {
-    public record CatogeryDto
-    (
-        int CatogeryId,
-        string CatogeryName
-    );
+    namespace DTOs
+    {
+        public record CatogeryDto
+        (
+            int CategoryId,  
+            string CategoryName
+        )
+        {
+            public CatogeryDto() : this(0, "") { }
+        }
+    }
 }

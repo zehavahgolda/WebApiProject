@@ -1,4 +1,5 @@
 ﻿using Entity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Repository
 {
@@ -8,6 +9,6 @@ namespace Repository
         Task<User> GetById(int id);
         Task<IEnumerable<User>> GetUsers();
         Task<User> Login(User user);
-        Task UpdateUser(int id, User user);
+        Task<ActionResult<User>> Put(int id, User user);
     }
 }

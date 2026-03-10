@@ -1,6 +1,6 @@
 ﻿using Entity;
 using Repository;
-using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Tests;
 using Xunit;
@@ -21,10 +21,25 @@ namespace RepositoryIntegrationTests
         {
             _context.Users.RemoveRange(_context.Users);
             await _context.SaveChangesAsync();
+
             // Arrange
             var repository = new UserRepository(_context);
-            var user1 = new User { Email = "user1@example.com", FirstName = "John", LastName = "Doe", Password = "password1" };
-            var user2 = new User { Email = "user2@example.com", FirstName = "Jane", LastName = "Doe", Password = "password2" };
+            var user1 = new User
+            {
+                Email = "user1@example.com",
+                FirstName = "John",
+                LastName = "Doe",
+                Password = "password1",
+                Role = "User"   // ✅ הוספנו Role
+            };
+            var user2 = new User
+            {
+                Email = "user2@example.com",
+                FirstName = "Jane",
+                LastName = "Doe",
+                Password = "password2",
+                Role = "User"   // ✅ הוספנו Role
+            };
             _context.Users.Add(user1);
             _context.Users.Add(user2);
             await _context.SaveChangesAsync();
@@ -43,7 +58,14 @@ namespace RepositoryIntegrationTests
         {
             // Arrange
             var repository = new UserRepository(_context);
-            var user = new User { Email = "user3@example.com", FirstName = "Alice", LastName = "Smith", Password = "password3" };
+            var user = new User
+            {
+                Email = "user3@example.com",
+                FirstName = "Alice",
+                LastName = "Smith",
+                Password = "password3",
+                Role = "User"   
+            };
 
             // Act
             await repository.AddUser(user);
@@ -59,7 +81,14 @@ namespace RepositoryIntegrationTests
         {
             // Arrange
             var repository = new UserRepository(_context);
-            var user = new User { Email = "user4@example.com", FirstName = "Bob", LastName = "Johnson", Password = "password4" };
+            var user = new User
+            {
+                Email = "user4@example.com",
+                FirstName = "Bob",
+                LastName = "Johnson",
+                Password = "password4",
+                Role = "User"   
+            };
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 

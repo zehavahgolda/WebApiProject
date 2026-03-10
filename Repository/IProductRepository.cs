@@ -4,9 +4,14 @@ namespace Repository
 {
     public interface IProductRepository
     {
-        public Task<(List<Product> Items, int TotalCount)> GetProducts(string? name, int?[] categories, int? minPrice, 
-         int? maxPrice, string? description, int? position, int? skip);
+        
+        Task<(IEnumerable<Product> products, int total)> GetProducts(int[]? categoryId, string? q, double? minPrice, 
+            double? maxPrice, string? color, string? material, bool? inStock, bool? isActive, string? sort, int? skip, int? position);
         public Task<Product> GetProductById(int id);
+        Task<Product> AddProduct(Product product);
+        Task<Product> UpdateProduct(int id, Product product);
+        public Task DeleteProduct(int id);
 
     }
 }
+

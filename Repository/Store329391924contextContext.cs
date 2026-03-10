@@ -20,8 +20,12 @@ public partial class Store_329391924Context : DbContext
     public virtual DbSet<Rating> Ratings { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=desktop-t8jm6mu;Database=Store_329391924Context;Integrated Security=True;TrustServerCertificate=True;");
-
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseSqlServer("Server=desktop-t8jm6mu;Database=Store_329391924Context;Integrated Security=True;TrustServerCertificate=True;");
+        }
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       
@@ -74,23 +78,26 @@ public partial class Store_329391924Context : DbContext
                 .HasConstraintName("FK_Order_Users");
         });
 
-        // --- Product ---
         modelBuilder.Entity<Product>(entity =>
         {
             entity.HasKey(e => e.ProductId);
-
-            entity.Property(e => e.ProductId)
-                .HasColumnName("Product_Id"); 
+            entity.Property(e => e.ProductId).ValueGeneratedOnAdd().HasColumnName("Product_Id");
             entity.Property(e => e.CategoryId).HasColumnName("Category_Id");
             entity.Property(e => e.ProductName).HasColumnName("Product_name").HasMaxLength(200);
             entity.Property(e => e.IsActive).HasDefaultValue(true);
+
+            entity.Property(e => e.ImgUrl2).HasColumnName("ImgUrl2");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)
                 .HasConstraintName("FK_Products_Categories");
         });
 
-       
+
+
+
+
+
         modelBuilder.Entity<User>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -106,7 +113,7 @@ public partial class Store_329391924Context : DbContext
             entity.ToTable("RATING");
             entity.HasKey(e => e.RatingId);
             entity.Property(e => e.RatingId).HasColumnName("RATING_ID"); 
-            entity.Property(e => e.RecordDate).HasColumnName("Record_Date").HasDefaultValueSql("(getdate())");
+            entity.Property(e => e.Record_Date).HasColumnName("Record_Date").HasDefaultValueSql("(getdate())");
         });
 
         OnModelCreatingPartial(modelBuilder);

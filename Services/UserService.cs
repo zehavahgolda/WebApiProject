@@ -50,7 +50,7 @@ namespace Services
         {
             
             User user = _imapper.Map<User>(userDto);
-            await _IuserRepository.UpdateUser(id, user);
+            await _IuserRepository.Put(id, user);
         }
     }
 }

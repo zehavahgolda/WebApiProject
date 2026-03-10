@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DTOs;
+using DTOs.DTOs;
 using Entity    ;
 using Repository;
 using System.Threading.Tasks;
