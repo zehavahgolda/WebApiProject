@@ -1,7 +1,5 @@
-﻿const baseUrl = "https://localhost:44382/api/Users"; // שנה אם ה-API רץ על פורט אחר
+﻿const baseUrl = "https://localhost:44382/api/Users";
 
-
-//משתמש חדש
 async function new_user() {
     const email = document.querySelector(".userName").value;
     const password = document.querySelector(".password").value;
@@ -12,14 +10,18 @@ async function new_user() {
         alert("אנא מלא את כל השדות");
         return;
     }
-    if (email.indexOf('@') === -1) {
-        alert("אנא הזן כתובת אימייל תקינה");
-        return;
-    }
 
-    const postData = { email, password, firstName, lastName };
+    const postData = {
+        Email: email,
+        Password: password,
+        FirstName: firstName,
+        LastName: lastName,
+        Phone: "",
+        Address: "",
+        Role: "User"
+    };
 
-    const response = await fetch(baseUrl, {
+    const response = await fetch(`${baseUrl}/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(postData)
@@ -28,52 +30,53 @@ async function new_user() {
     if (response.ok) {
         alert("נרשמת בהצלחה!");
     } else {
-        alert("הרישום נכשל!");
+        const error = await response.text();
+        alert("הרישום נכשל: " + error);
     }
 }
 
-//כניסת משתמש רשום
 async function login() {
-    const userName = document.querySelector(".us").value;
+    const email = document.querySelector(".us").value; 
     const password = document.querySelector(".pas").value;
 
-    const log = { userName, password, firstName: "", lastName: "" };
+    const log = { email, password };
 
-    const response = await fetch(`${baseUrl}/Login`, {
+    const response = await fetch(`${baseUrl}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(log)
     });
-    alert(response)
+
     if (response.ok) {
         const data = await response.json();
         sessionStorage.setItem('user', JSON.stringify(data));
-        alert(`ברוך שובך, ${data.firstName || data.userName}!`);
-        window.location.href="update.html"
-    }
-    else
-    {
+        alert(`ברוך שובך, ${data.firstName || data.email}!`);
+        window.location.href = "update.html";
+    } else {
         alert("שם המשתמש או הסיסמה שגויים!");
     }
 }
-
-
-//עדכון משתמש
-async function up_date() {
-
-
+async function update() {
     const user = JSON.parse(sessionStorage.getItem('user'));
     if (!user) {
         alert("לא נמצא משתמש מחובר");
         return;
     }
-  
-    const userName = document.querySelector("#userName").value;
+
+    const email = document.querySelector("#userName").value;
     const firstName = document.querySelector("#firstName").value;
     const lastName = document.querySelector("#lastName").value;
     const password = document.querySelector("#password").value;
 
-    const data = { id: user.id, userName, firstName, lastName, password };
+    const data = {
+        Id: user.id,
+        Email: email,
+        FirstName: firstName,
+        LastName: lastName,
+        Password: password,
+        Phone: user.phone || "",
+        Address: user.address || ""
+    };
 
     const response = await fetch(`${baseUrl}/${user.id}`, {
         method: 'PUT',
@@ -81,35 +84,33 @@ async function up_date() {
         body: JSON.stringify(data)
     });
 
-        if (response.ok) {
+    if (response.ok) {
         alert("הפרטים עודכנו בהצלחה");
-       } else {
-           alert("עדכון נכשל");
-      }
 
+        sessionStorage.setItem('user', JSON.stringify(data));
+    } else {
+        const errorText = await response.text();
+        console.error("Update failed:", errorText);
+        alert("עדכון נכשל: " + errorText);
+    }
 }
 
 
-//בדיקת חוזק סיסמא
 async function check_password() {
     const pass = document.querySelector(".password").value;
-        const response = await fetch("https://localhost:44382/api/Passwords", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(pass)
 
-        });
+    
+    const response = await fetch("https://localhost:44382/api/Passwords", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(pass)
+    });
+
+    if (response.ok) {
         const dataPost = await response.json();
         const prog = document.querySelector(".progress");
-    prog.value = dataPost.strength * 25;
-    console.log(dataPost);
-        if (response.status == 200) {
-            return dataPost.strength / 4;
-        }
-        else {
-            return 0;
-        }
+        if (prog) prog.value = dataPost.strength * 25;
+        return dataPost.strength / 4;
     }
-
+    return 0;
+}
