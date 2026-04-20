@@ -1,17 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Services;
-using Repository;
 using Entity;
-using System.Threading.Tasks;
 using DTOs;
+using System.Threading.Tasks;
+
 namespace WebApiShop.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private IUserservice _userservice;
-        private ILogger<UsersController> _logger;
+        private readonly IUserservice _userservice;
+        private readonly ILogger<UsersController> _logger;
 
         public UsersController(IUserservice userservice, ILogger<UsersController> logger)
         {
@@ -19,15 +19,14 @@ namespace WebApiShop.Controllers
             _logger = logger;
         }
 
-
-
         [HttpPost("register")]
-        public async Task<ActionResult<User>> Post([FromBody] UserDto userDto) 
+        public async Task<ActionResult<UserResponseDto>> Post([FromBody] UserRegisterDto userDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+
             User user = new User
             {
                 Email = userDto.Email,
@@ -45,59 +44,63 @@ namespace WebApiShop.Controllers
                 return BadRequest("סיסמה חלשה או משתמש כבר קיים במערכת");
             }
 
-            return Ok(acceptedUser);
+            var response = new UserResponseDto(
+                acceptedUser.Id,
+                acceptedUser.FirstName,
+                acceptedUser.LastName,
+                acceptedUser.Email,
+                acceptedUser.Phone,
+                acceptedUser.Address
+            );
+
+            return Ok(response);
         }
 
-
-
-
         [HttpPost("login")]
-        public async Task<ActionResult<UserDto>> Login([FromBody] User user)
+        public async Task<ActionResult<UserResponseDto>> Login([FromBody] UserLoginDto loginInfo)
         {
-            
-            if (string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password))
-            {
-                return BadRequest("חובה להזין אימייל וסיסמה");
-            }
-
-            _logger.LogInformation($"Attempting login for: Email='{user.Email}'");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            User _user = await _userservice.loginServices(user);
+            _logger.LogInformation($"Attempting login for: Email='{loginInfo.Email}'");
 
-            if (_user == null)
+            UserResponseDto authenticatedUser = await _userservice.loginServices(loginInfo);
+
+            if (authenticatedUser == null)
             {
-                _logger.LogWarning($"Login failed for: {user.Email}");
+                _logger.LogWarning($"Login failed for: {loginInfo.Email}");
                 return Unauthorized("פרטי התחברות שגויים או משתמש לא קיים");
             }
 
-            _logger.LogInformation($"Login success: UserName={_user.Email}");
+            _logger.LogInformation($"Login success: UserName={authenticatedUser.Email}");
 
-            return Ok(_user);
+            return Ok(authenticatedUser);
         }
-
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] UserDto userDto)
+        public async Task<IActionResult> Put(int id, [FromBody] UserRegisterDto userDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             await _userservice.update(userDto, id);
             return NoContent();
         }
 
-
-
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserDto>> Get(int id)
+        public async Task<ActionResult<UserResponseDto>> Get(int id)
         {
-            UserDto user = await _userservice.GetById(id);
+    
+            var user = await _userservice.GetById(id);
+
             if (user == null)
-                return NoContent();
+            {
+                return NotFound(); 
+            }
+
             return Ok(user);
         }
-
-
-       
     }
 }

@@ -29,7 +29,6 @@ namespace Services
             try
             {
                 order.OredrDate = DateOnly.FromDateTime(DateTime.Now);
-
                 double originalSum = order.OrderSum ?? 0;
                 double calculatedSum = 0;
 
@@ -45,41 +44,31 @@ namespace Services
                     }
                 }
 
-             
-                if (originalSum != calculatedSum)
+                if (Math.Abs(originalSum - calculatedSum) > 0.01)
                 {
-                    _logger.LogWarning($"Order sum mismatch detected! Received: {originalSum}, Calculated: {calculatedSum}. Updating to correct sum.");
+                    _logger.LogWarning("Order sum mismatch! Received: {originalSum}, Calculated: {calculatedSum}", originalSum, calculatedSum);
                 }
 
                 order.OrderSum = calculatedSum;
                 Order addedOrder = await _orderRepository.AddOrder(order);
-
                 return _imapper.Map<OrderDto>(addedOrder);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Error occurred while placing order for User {order.UserId}");
+                _logger.LogError(ex, "Error occurred while placing order for User {UserId}", order.UserId);
                 throw;
             }
         }
 
         public async Task<OrderDto> GetOrderByid(int id)
         {
-            try
-            {
-                Order order = await _orderRepository.GetOrderById(id);
-                return _imapper.Map<OrderDto>(order);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, $"Error fetching order {id}");
-                throw;
-            }
+            var order = await _orderRepository.GetOrderById(id);
+            return _imapper.Map<OrderDto>(order);
         }
 
         public async Task<IEnumerable<OrderDto>> GetAllOrders()
         {
-            IEnumerable<Order> orders = await _orderRepository.GetAllOrders();
+            var orders = await _orderRepository.GetAllOrders();
             return _imapper.Map<IEnumerable<OrderDto>>(orders);
         }
 

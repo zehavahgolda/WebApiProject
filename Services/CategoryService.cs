@@ -25,18 +25,8 @@ namespace Services
             return catogeryDto;
         }
 
-        //public async Task<CatogeryDto> GetCategoryById(int id)
-        //{
-        //    var category = await _catgoryRepsitory.GetByIdAsync(id);
-
-        //    if (category == null) return null;
-
-        //    return new CatogeryDto
-        //    {
-        //        Id = category.CatogeryId,
-        //        Name = category.CatogeryName
-        //    };
-        //}
+        
+     
 
     }
 }

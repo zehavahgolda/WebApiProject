@@ -1,0 +1,1263 @@
+2026-03-09 11:42:27.7086 Info Loading assembly name: NLog.MailKit
+2026-03-09 11:42:27.8201 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 11:42:27.8527 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 11:42:28.1372 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 11:42:28.1436 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 11:42:28.1782 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 12:02:16.8349 Info Loading assembly name: NLog.MailKit
+2026-03-09 12:02:16.8544 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 12:02:16.8834 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 12:02:16.9170 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 12:02:16.9234 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 12:02:16.9606 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 12:02:36.8007 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae56300sm24974420f8f.37 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae56300sm24974420f8f.37 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 12:02:54.0172 Info Loading assembly name: NLog.MailKit
+2026-03-09 12:02:54.0483 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 12:02:54.0854 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 12:02:54.1297 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 12:02:54.1297 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 12:02:54.1624 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 12:03:12.2457 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4851fb3668csm524324895e9.13 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4851fb3668csm524324895e9.13 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 12:05:17.4311 Info Loading assembly name: NLog.MailKit
+2026-03-09 12:05:17.4781 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 12:05:17.6111 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 12:05:17.6576 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 12:05:17.6576 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 12:05:17.7371 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 12:05:35.7746 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48527686bcesm406745215e9.7 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48527686bcesm406745215e9.7 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 12:06:26.6985 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8d95dsm27483641f8f.7 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8d95dsm27483641f8f.7 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 12:06:30.3515 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dadac2a7sm25423863f8f.15 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dadac2a7sm25423863f8f.15 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 12:19:34.9284 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853916624dsm101562085e9.6 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853916624dsm101562085e9.6 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 12:19:56.6537 Info Loading assembly name: NLog.MailKit
+2026-03-09 12:19:56.6799 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 12:19:56.7383 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 12:19:56.7854 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 12:19:56.7951 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 12:19:56.8573 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 12:20:01.4817 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852aac79b3sm91222625e9.19 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852aac79b3sm91222625e9.19 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 12:20:59.9318 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae35cf7sm24222206f8f.26 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae35cf7sm24222206f8f.26 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 12:46:36.4794 Info Loading assembly name: NLog.MailKit
+2026-03-09 12:46:36.5499 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 12:46:36.5708 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 12:46:36.7074 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 12:46:36.7074 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 12:46:36.7355 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 12:46:55.1678 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae3a20fsm25343640f8f.28 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae3a20fsm25343640f8f.28 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 15:14:31.8483 Info Loading assembly name: NLog.MailKit
+2026-03-09 15:14:31.9200 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 15:14:31.9496 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 15:14:32.1433 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 15:14:32.1433 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 15:14:32.1730 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 15:14:50.0620 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853a4df13bsm102536185e9.4 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853a4df13bsm102536185e9.4 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 15:41:27.7770 Error MailTarget(Name=email): Error sending mail. Exception: System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 15:41:27.7990 Error MailTarget(Name=email): Error sending mail. Exception: System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 15:41:56.4540 Info Loading assembly name: NLog.MailKit
+2026-03-09 15:41:56.4929 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 15:41:56.5516 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 15:41:56.5928 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 15:41:56.6005 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 15:41:56.6515 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 15:42:13.4912 Error MailTarget(Name=email): Error sending mail. Exception: System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 15:42:44.6612 Error MailTarget(Name=email): Error sending mail. Exception: System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 15:42:44.6962 Error MailTarget(Name=email): Error sending mail. Exception: System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 15:43:25.1148 Info Loading assembly name: NLog.MailKit
+2026-03-09 15:43:25.1400 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 15:43:25.1733 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 15:43:25.2033 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 15:43:25.2033 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 15:43:25.2780 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 15:43:41.7913 Error MailTarget(Name=email): Error sending mail. Exception: System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 15:44:07.1486 Error MailTarget(Name=email): Error sending mail. Exception: System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 15:44:07.1743 Error MailTarget(Name=email): Error sending mail. Exception: System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 15:44:18.9083 Error MailTarget(Name=email): Error sending mail. Exception: System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:19:14.0644 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:19:14.1625 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:19:14.1797 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:19:14.3806 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:19:14.3932 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:19:14.4075 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 17:19:32.1843 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485244b6e9esm155750505e9.5 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485244b6e9esm155750505e9.5 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:19:56.6876 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852f6994a1sm159974565e9.9 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852f6994a1sm159974565e9.9 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:19:57.9210 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852378de92sm138980745e9.0 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852378de92sm138980745e9.0 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:25:00.0718 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dadb29fdsm27747276f8f.16 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dadb29fdsm27747276f8f.16 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:25:07.1884 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:25:07.2085 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:25:07.2404 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:25:07.2744 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:25:07.2744 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:25:07.3315 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 17:25:20.7745 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485245dbcffsm93642395e9.18 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485245dbcffsm93642395e9.18 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:27:44.6934 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853a310b8fsm113390665e9.11 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853a310b8fsm113390665e9.11 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:27:46.0807 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48539e574b5sm116412875e9.8 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48539e574b5sm116412875e9.8 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:33:10.7362 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:33:10.7568 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:33:10.7876 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:33:10.8229 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:33:10.8229 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:33:10.8571 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 17:33:24.0804 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485237dd017sm92875785e9.2 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485237dd017sm92875785e9.2 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:37:34.0137 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:37:34.0209 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:37:34.0401 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:37:34.0528 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:37:34.0528 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:37:34.0704 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 17:41:23.9910 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:41:23.9910 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:41:24.0158 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:41:24.0158 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:41:24.0158 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:41:24.0500 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 17:41:44.0818 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:41:44.0818 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:41:44.0997 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:41:44.0997 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:41:44.1112 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:41:44.1263 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 17:41:50.4199 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:41:50.4245 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:41:50.4413 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:41:50.4556 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:41:50.4556 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:41:50.4697 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 17:51:50.0427 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:51:50.0607 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:51:50.0920 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:51:50.1137 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:51:50.1294 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:51:50.1674 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 17:51:53.6560 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a8d4desm707295e9.8 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a8d4desm707295e9.8 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:52:29.9207 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541ac17f2sm399205e9.6 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541ac17f2sm399205e9.6 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:52:31.2583 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a7f1f5sm1549925e9.4 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a7f1f5sm1549925e9.4 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 17:55:35.1849 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:55:35.1906 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:55:35.2067 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:55:35.2067 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:55:35.2207 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:55:35.2390 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 17:55:42.8855 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:55:42.8927 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:55:42.9129 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:55:42.9262 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:55:42.9262 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:55:42.9546 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 17:55:47.2527 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:55:47.2527 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:55:47.2736 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:55:47.2837 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:55:47.2837 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:55:47.3040 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 17:57:18.7614 Info Loading assembly name: NLog.MailKit
+2026-03-09 17:57:18.7670 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 17:57:18.7820 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 17:57:18.7820 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 17:57:18.7820 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 17:57:18.8057 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 18:01:53.1608 Info Loading assembly name: NLog.MailKit
+2026-03-09 18:01:53.1608 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 18:01:53.1814 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 18:01:53.1914 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 18:01:53.1914 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 18:01:53.2053 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 18:02:59.5170 Info Loading assembly name: NLog.MailKit
+2026-03-09 18:02:59.5170 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 18:02:59.5360 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 18:02:59.5360 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 18:02:59.5480 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 18:02:59.5639 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 18:03:51.0491 Info Loading assembly name: NLog.MailKit
+2026-03-09 18:03:51.0491 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 18:03:51.0692 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 18:03:51.0785 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 18:03:51.0785 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 18:03:51.0978 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 18:05:14.7832 Info Loading assembly name: NLog.MailKit
+2026-03-09 18:05:14.7832 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 18:05:14.8028 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 18:05:14.8028 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 18:05:14.8156 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 18:05:14.8328 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 18:08:53.5424 Info Loading assembly name: NLog.MailKit
+2026-03-09 18:08:53.5486 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 18:08:53.5647 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 18:08:53.5647 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 18:08:53.5789 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 18:08:53.5974 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 18:09:37.0141 Info Loading assembly name: NLog.MailKit
+2026-03-09 18:09:37.0200 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 18:09:37.0366 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 18:09:37.0481 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 18:09:37.0481 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 18:09:37.0628 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 18:37:28.2393 Info Loading assembly name: NLog.MailKit
+2026-03-09 18:37:28.2542 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 18:37:28.2860 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 18:37:28.3150 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 18:37:28.3150 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 18:37:28.3767 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 18:37:31.6093 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8da01sm29241430f8f.1 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8da01sm29241430f8f.1 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 18:37:42.1860 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48535c7fb8asm45010235e9.3 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48535c7fb8asm45010235e9.3 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 18:40:30.8833 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a7f182sm5593135e9.5 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a7f182sm5593135e9.5 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 18:41:01.7644 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541ab9f9esm3633935e9.4 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541ab9f9esm3633935e9.4 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 18:41:23.9059 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae483desm26588658f8f.34 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae483desm26588658f8f.34 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 18:42:19.3442 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541b7f406sm2380065e9.13 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541b7f406sm2380065e9.13 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 18:49:09.4465 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485358cd26bsm86336915e9.8 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485358cd26bsm86336915e9.8 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 18:49:50.4435 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae35cf7sm26552987f8f.26 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae35cf7sm26552987f8f.26 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 18:59:28.1481 Info Loading assembly name: NLog.MailKit
+2026-03-09 18:59:28.1877 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 18:59:28.2569 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 18:59:28.3105 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 18:59:28.3207 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 18:59:28.3851 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 18:59:31.0544 Error MailTarget(Name=email): Error sending mail. Exception: System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 18:59:44.1947 Error MailTarget(Name=email): Error sending mail. Exception: System.Net.Sockets.SocketException (0x00002AF9): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 18:59:59.1443 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae4b860sm30686945f8f.36 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae4b860sm30686945f8f.36 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 19:01:07.7439 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae4b860sm30694982f8f.36 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae4b860sm30694982f8f.36 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 19:01:16.2248 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852378de92sm142078945e9.0 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852378de92sm142078945e9.0 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 19:02:53.1658 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541b7f3cdsm4121575e9.14 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541b7f3cdsm4121575e9.14 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 19:03:01.1612 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541aba60esm4454955e9.5 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541aba60esm4454955e9.5 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:15:41.4883 Info Loading assembly name: NLog.MailKit
+2026-03-09 22:15:41.5156 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-09 22:15:41.5560 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-09 22:15:41.5791 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-09 22:15:41.5977 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-09 22:15:41.6318 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-09 22:15:45.5850 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485247029a4sm94899605e9.26 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485247029a4sm94899605e9.26 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:15:57.1841 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8d840sm32110011f8f.8 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8d840sm32110011f8f.8 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:16:20.9851 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541aa73dasm27745295e9.2 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541aa73dasm27745295e9.2 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:16:47.0670 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541aba60esm16606395e9.5 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541aba60esm16606395e9.5 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:17:35.6581 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485246f36c1sm96311145e9.22 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485246f36c1sm96311145e9.22 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:17:46.5454 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853149caffsm74371415e9.1 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853149caffsm74371415e9.1 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:18:25.0032 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a900easm20544735e9.9 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a900easm20544735e9.9 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:18:41.7560 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541b7f3cdsm16682775e9.14 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541b7f3cdsm16682775e9.14 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:19:13.5319 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852378e700sm166303145e9.0 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852378e700sm166303145e9.0 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:19:42.3705 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae3d98asm32811001f8f.30 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae3d98asm32811001f8f.30 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:20:03.6082 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853a797dbasm52734845e9.7 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853a797dbasm52734845e9.7 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:21:07.1204 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a9e6aesm15736475e9.11 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a9e6aesm15736475e9.11 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:21:34.2517 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852aac79b3sm106508615e9.19 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852aac79b3sm106508615e9.19 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:22:28.2127 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a6bbcesm17413085e9.3 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a6bbcesm17413085e9.3 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:23:37.2245 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad1cb7csm29944298f8f.0 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad1cb7csm29944298f8f.0 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:23:50.9919 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541b7f406sm14255395e9.13 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541b7f406sm14255395e9.13 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:24:09.4231 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad1cb7csm29948311f8f.0 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad1cb7csm29948311f8f.0 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:24:15.7631 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541aac28bsm15832865e9.1 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541aac28bsm15832865e9.1 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:24:22.6190 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad97abasm26848006f8f.10 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad97abasm26848006f8f.10 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:24:42.7779 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485237f354esm97235745e9.5 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485237f354esm97235745e9.5 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:25:02.8226 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad97abasm26851826f8f.10 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad97abasm26851826f8f.10 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:25:29.6890 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541aad45fsm18579995e9.15 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541aad45fsm18579995e9.15 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:25:41.1062 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541acea11sm16135145e9.7 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541acea11sm16135145e9.7 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:25:48.7050 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485237f354esm97255485e9.5 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485237f354esm97255485e9.5 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:26:23.4937 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae3a20fsm28669825f8f.28 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae3a20fsm28669825f8f.28 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:26:47.1390 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8d95dsm32003852f8f.7 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8d95dsm32003852f8f.7 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:27:01.8589 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8d968sm28249887f8f.6 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8d968sm28249887f8f.6 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:27:14.2392 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dadb85b8sm29847942f8f.17 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dadb85b8sm29847942f8f.17 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:27:16.3306 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48533d6151esm55648505e9.10 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48533d6151esm55648505e9.10 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:28:24.7414 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8da01sm30770561f8f.1 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad8da01sm30770561f8f.1 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:28:53.1031 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae2ba66sm25675404f8f.20 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae2ba66sm25675404f8f.20 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:29:15.7565 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad97be5sm29612485f8f.11 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad97be5sm29612485f8f.11 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:30:16.6783 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853a498afbsm88451915e9.0 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4853a498afbsm88451915e9.0 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-09 22:30:29.7813 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a8f610sm29157605e9.7 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-48541a8f610sm29157605e9.7 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-10 10:46:18.0180 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae2ba66sm29886217f8f.20 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae2ba66sm29886217f8f.20 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-10 10:48:06.5417 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad97abasm31223222f8f.10 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dad97abasm31223222f8f.10 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-10 11:01:44.4981 Info Loading assembly name: NLog.MailKit
+2026-03-10 11:01:44.5390 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-10 11:01:44.6101 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-10 11:01:44.7232 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-10 11:01:44.7361 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-10 11:01:44.8264 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-10 11:01:50.6035 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852470a654sm108097305e9.29 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-4852470a654sm108097305e9.29 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-10 11:03:26.2003 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae3d98asm38119308f8f.30 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae3d98asm38119308f8f.30 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-10 11:03:37.5290 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae56300sm33938703f8f.37 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired ffacd0b85a97d-439dae56300sm33938703f8f.37 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-10 11:05:45.9760 Error MailTarget(Name=email): Error sending mail. Exception: MailKit.Security.AuthenticationException: 534: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485419c2930sm102798355e9.0 - gsmtp
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Please log in with your web browser and then try again. For more
+5.7.9 information, go to
+5.7.9  https://support.google.com/mail/?p=WebLoginRequired 5b1f17b1804b1-485419c2930sm102798355e9.0 - gsmtp
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at NLog.MailKit.MailTarget.SendMailMessage(MimeMessage message, LogEventInfo lastEvent)
+   at NLog.MailKit.MailTarget.ProcessSingleMailMessage(IEnumerable`1 events)
+2026-03-10 11:16:13.8799 Info Loading assembly name: NLog.MailKit
+2026-03-10 11:16:13.9181 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-10 11:16:13.9740 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-10 11:16:14.0264 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-10 11:16:14.0400 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-10 11:16:14.1211 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-10 11:23:55.5042 Info Loading assembly name: NLog.MailKit
+2026-03-10 11:23:55.5208 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-10 11:23:55.5555 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-10 11:23:55.5887 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-10 11:23:55.5940 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-10 11:23:55.6323 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-10 11:30:34.7387 Info Loading assembly name: NLog.MailKit
+2026-03-10 11:30:35.0078 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-10 11:30:35.0602 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-10 11:30:35.4227 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-10 11:30:35.4537 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-10 11:30:35.5275 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-10 11:35:34.3467 Info Loading assembly name: NLog.MailKit
+2026-03-10 11:35:34.3792 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-10 11:35:34.4475 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-10 11:35:34.4842 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-10 11:35:34.4935 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-10 11:35:34.5551 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-10 11:36:38.1437 Info Loading assembly name: NLog.MailKit
+2026-03-10 11:36:38.1550 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-10 11:36:38.1728 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-10 11:36:38.1895 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-10 11:36:38.1895 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-10 11:36:38.2060 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-15 15:08:57.3494 Info Loading assembly name: NLog.MailKit
+2026-03-15 15:08:57.5031 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-15 15:08:57.5491 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-15 15:08:57.8828 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-15 15:08:57.8932 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-15 15:08:57.9402 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-15 15:13:05.0092 Info Loading assembly name: NLog.MailKit
+2026-03-15 15:13:05.0413 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-15 15:13:05.1114 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-15 15:13:05.1416 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-15 15:13:05.1652 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-15 15:13:05.2065 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-15 15:21:11.9954 Info Loading assembly name: NLog.MailKit
+2026-03-15 15:21:12.0192 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-15 15:21:12.0635 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-15 15:21:12.0966 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-15 15:21:12.1195 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-15 15:21:12.1778 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-15 15:21:43.5498 Info Loading assembly name: NLog.MailKit
+2026-03-15 15:21:43.5712 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-15 15:21:43.6191 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-15 15:21:43.6492 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-15 15:21:43.6566 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-15 15:21:43.6991 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-03-15 15:31:43.8370 Info Loading assembly name: NLog.MailKit
+2026-03-15 15:31:43.8718 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-03-15 15:31:43.9402 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-03-15 15:31:43.9810 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-03-15 15:31:43.9810 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-03-15 15:31:44.0313 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-11 21:35:10.8136 Info Loading assembly name: NLog.MailKit
+2026-04-11 21:35:11.0513 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-04-11 21:35:11.1153 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-11 21:35:11.5216 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-04-11 21:35:11.5216 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-04-11 21:35:11.6279 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-16 19:00:07.4082 Info Loading assembly name: NLog.MailKit
+2026-04-16 19:00:07.4875 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-04-16 19:00:07.5111 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-16 19:00:07.7192 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-04-16 19:00:07.7349 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.6.4706. Product version: 6.0.6+1913a823347d47c0b004ce714af74436261daf20. GlobalAssemblyCache: False
+2026-04-16 19:00:07.7507 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Downloads\WebApiShop-main\WebApiShop-main\WebApiShop\nlog.config
+2026-04-16 19:00:24.6026 Info Loading assembly name: NLog.MailKit
+2026-04-16 19:00:24.6191 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-04-16 19:00:24.6760 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-16 19:00:24.7034 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-04-16 19:00:24.7034 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.6.4706. Product version: 6.0.6+1913a823347d47c0b004ce714af74436261daf20. GlobalAssemblyCache: False
+2026-04-16 19:00:24.7351 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Downloads\WebApiShop-main\WebApiShop-main\WebApiShop\nlog.config
+2026-04-16 19:15:09.4835 Info Loading assembly name: NLog.MailKit
+2026-04-16 19:15:09.5020 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-04-16 19:15:09.5391 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-16 19:15:09.5616 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-04-16 19:15:09.5616 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.6.4706. Product version: 6.0.6+1913a823347d47c0b004ce714af74436261daf20. GlobalAssemblyCache: False
+2026-04-16 19:15:09.6074 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Downloads\WebApiShop-main\WebApiShop-main\WebApiShop\nlog.config
+2026-04-16 19:21:55.5145 Info Loading assembly name: NLog.MailKit
+2026-04-16 19:21:55.5334 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.9893. Product version: 6.0.5+4327d9cd00e234f427bebcb5bfcbb678b316cfd0. GlobalAssemblyCache: False
+2026-04-16 19:21:55.5701 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-16 19:21:55.5949 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-04-16 19:21:55.5949 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.6.4706. Product version: 6.0.6+1913a823347d47c0b004ce714af74436261daf20. GlobalAssemblyCache: False
+2026-04-16 19:21:55.6238 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=52, AutoReload=true, FilePath=C:\Users\PC\Downloads\WebApiShop-main\WebApiShop-main\WebApiShop\nlog.config

@@ -1,0 +1,5 @@
+{"timestamp":"2026-04-18 20:41:39.0923","level":"Info","message":"Rating: Post order called for User 1.","logger":"WebApiShop.Controllers.OrdersController"}
+{"timestamp":"2026-04-18 20:43:35.5490","level":"Warn","message":"Order sum mismatch detected! Received: 740, Calculated: 640. Updating to correct sum.","logger":"Services.OrderService"}
+{"timestamp":"2026-04-18 20:46:50.9583","level":"Info","message":"Rating: Post order called for User 1.","logger":"WebApiShop.Controllers.OrdersController"}
+{"timestamp":"2026-04-18 20:57:49.1033","level":"Info","message":"Rating: Post order called for User 1.","logger":"WebApiShop.Controllers.OrdersController"}
+{"timestamp":"2026-04-18 20:57:49.7338","level":"Warn","message":"Order sum mismatch detected! Received: 740, Calculated: 640. Updating to correct sum.","logger":"Services.OrderService"}

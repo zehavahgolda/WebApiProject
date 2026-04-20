@@ -1,0 +1,27 @@
+2026-04-16 20:41:06.9474 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-16 20:41:06.9474 Info Closing old configuration.
+2026-04-16 20:41:06.9634 Info Configuration initialized: TargetNames=mylogfile, ConfigItems=21, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-16 20:41:20.4187 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-16 20:41:20.4187 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-04-16 20:41:20.4582 Info Configuration initialized: TargetNames=mylogfile, ConfigItems=21, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-16 21:17:26.5555 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-16 21:17:26.5731 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-04-16 21:17:26.6064 Info Configuration initialized: TargetNames=mylogfile, ConfigItems=21, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-18 20:30:04.4172 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-18 20:30:04.4172 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-04-18 20:30:04.4556 Info Configuration initialized: TargetNames=mylogfile, ConfigItems=21, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-18 20:39:54.4188 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-18 20:39:54.4188 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-04-18 20:39:54.4569 Info Configuration initialized: TargetNames=mylogfile, ConfigItems=21, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-18 20:46:10.5632 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-18 20:46:10.5778 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-04-18 20:46:10.6040 Info Configuration initialized: TargetNames=mylogfile, ConfigItems=21, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-18 20:55:56.6940 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-18 20:55:56.7057 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-04-18 20:55:56.7244 Info Configuration initialized: TargetNames=mylogfile, ConfigItems=22, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-18 20:56:44.1583 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-18 20:56:44.1743 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-04-18 20:56:44.2004 Info Configuration initialized: TargetNames=mylogfile, ConfigItems=22, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-18 20:59:28.3559 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-18 20:59:28.3691 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-04-18 20:59:28.3943 Info Configuration initialized: TargetNames=mylogfile, ConfigItems=21, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config

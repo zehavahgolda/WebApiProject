@@ -1,0 +1,8 @@
+2026-04-16 20:35:14.8067 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-16 20:35:14.8157 Info Closing old configuration.
+2026-04-16 20:35:14.8244 Info Configuration initialized: TargetNames=mylogfile, ConfigItems=24, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-16 20:35:25.1253 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-04-16 20:35:25.1426 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.0.4914. Product version: 6.1.0+5b1846554f5a8f98878ca64cce5a485ca3b8275c. GlobalAssemblyCache: False
+2026-04-16 20:35:25.1690 Info Configuration initialized: TargetNames=mylogfile, ConfigItems=24, AutoReload=true, FilePath=C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config
+2026-04-16 20:41:06.9227 Info AutoReload Config File Monitor reloading configuration...
+2026-04-16 20:41:06.9474 Info Loading NLog config from XML file: C:\Users\PC\Desktop\לימודים\יד\API\MY_PROJECT\WebApiShop\nlog.config

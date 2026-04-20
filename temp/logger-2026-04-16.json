@@ -1,0 +1,2 @@
+{"timestamp":"2026-04-16 19:27:27.5130","level":"Info","message":"Attempting login for: UserName='yandskay@gmail.com'","logger":"WebApiShop.Controllers.UsersController"}
+{"timestamp":"2026-04-16 19:27:27.5765","level":"Warn","message":"Login failed for: yandskay@gmail.com","logger":"WebApiShop.Controllers.UsersController"}

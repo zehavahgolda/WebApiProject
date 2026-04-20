@@ -34,16 +34,5 @@ namespace WebApiShop.Controllers
 
 
 
-        //[HttpGet("{id}")]
-        //public async Task<ActionResult<CatogeryDto>> GetById(int id)
-        //{
-        //    var category = await _categoryService.GetCategoryById(id);
-        //    if (category == null)
-        //    {
-        //        return NotFound($"Category with ID {id} not found.");
-        //    }
-
-        //    return Ok(category);
-        //}
     }
 }
