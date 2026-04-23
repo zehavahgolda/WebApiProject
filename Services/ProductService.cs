@@ -1,27 +1,39 @@
 ﻿using AutoMapper;
 using DTOs;
-using Entity    ;
+using Entity;
 using Microsoft.EntityFrameworkCore;
 using Repository;
 using System;
+using System.Collections.Generic; // נוסף עבור List
 using System.Threading.Tasks;
+using Microsoft.Extensions.Caching.Distributed; // נוסף עבור Redis
+using System.Text.Json; // נוסף עבור Serialization
 
 namespace Services
 {
     public class Productservice : IProductservice
-
     {
-        IProductRepository _productRepository;
-        IMapper _imapper;
+        private readonly IProductRepository _productRepository;
+        private readonly IMapper _imapper;
+        private readonly IDistributedCache _cache; 
 
-        public Productservice(IProductRepository productRepository, IMapper imapper)
+        public Productservice(IProductRepository productRepository, IMapper imapper, IDistributedCache cache)
         {
             _productRepository = productRepository;
             _imapper = imapper;
+            _cache = cache;
         }
-       
- public async Task<FinalProducts> GetProducts(int[]?categoryId, string? q, double? minPrice, double? maxPrice, string? color, string? material, bool? inStock, bool? isActive, string? sort, int? skip, int? position)
+
+        public async Task<FinalProducts> GetProducts(int[]? categoryId, string? q, double? minPrice, double? maxPrice, string? color, string? material, bool? inStock, bool? isActive, string? sort, int? skip, int? position)
         {
+            string cacheKey = $"products_{q}_{minPrice}_{maxPrice}_{color}_{material}_{sort}_{skip}_{position}";
+
+            var cachedData = await _cache.GetStringAsync(cacheKey);
+            if (!string.IsNullOrEmpty(cachedData))
+            {
+                return JsonSerializer.Deserialize<FinalProducts>(cachedData);
+            }
+
             var (products, total) = await _productRepository.GetProducts(
                 categoryId, q, minPrice, maxPrice, color, material,
                 inStock, isActive, sort, skip, position);
@@ -34,13 +46,24 @@ namespace Services
             bool hasNext = (total - (page * pageSize)) > 0;
             bool hasPrev = page > 1;
 
-            return new FinalProducts(itemsDto, total, hasNext, hasPrev);
+            var finalResult = new FinalProducts(itemsDto, total, hasNext, hasPrev);
+
+            
+            var cacheOptions = new DistributedCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)
+            };
+
+            var serializedData = JsonSerializer.Serialize(finalResult);
+            await _cache.SetStringAsync(cacheKey, serializedData, cacheOptions);
+
+            return finalResult;
         }
+
         public async Task<Product> GetProductById(int id)
         {
             return await _productRepository.GetProductById(id);
         }
-
 
         public async Task<Product> AddProduct(Product product)
         {
@@ -54,9 +77,7 @@ namespace Services
 
         public async Task DeleteProduct(int id)
         {
-         
             await _productRepository.DeleteProduct(id);
         }
-
     }
 }

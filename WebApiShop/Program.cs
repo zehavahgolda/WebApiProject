@@ -9,11 +9,9 @@ using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// הגדרת NLog
 builder.Logging.ClearProviders();
 builder.Host.UseNLog();
 
-// JWT Authentication
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -44,7 +42,13 @@ builder.Services.AddCors(options =>
 builder.Services.AddDbContext<Store_329391924Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Dependency Injection
+var redisConn = builder.Configuration.GetConnectionString("Redis");
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = redisConn;
+    options.InstanceName = "Shop_";
+});
+
 builder.Services.AddScoped<ICategoryRepository, CatogeryRepsitory>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserservice, UserService>();
@@ -62,7 +66,6 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
-        // מניעת תקיעה בגלל קשרים מעגליים ב-JSON
         options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
     });
 
@@ -70,7 +73,6 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Middleware Pipeline
 app.UseMiddleware<ErrorMiddleware>();
 
 if (app.Environment.IsDevelopment())
@@ -78,13 +80,12 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.UseSwaggerUI(options =>
     {
-        // התיקון לנתיב ב-.NET 9
         options.SwaggerEndpoint("/openapi/v1.json", "My API V1");
     });
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles(); // מומלץ לפני Routing
+app.UseStaticFiles();
 app.UseRouting();
 app.UseCors("MyPolicy");
 
