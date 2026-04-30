@@ -4,10 +4,10 @@ using Entity;
 using Microsoft.EntityFrameworkCore;
 using Repository;
 using System;
-using System.Collections.Generic; // נוסף עבור List
+using System.Collections.Generic; 
 using System.Threading.Tasks;
-using Microsoft.Extensions.Caching.Distributed; // נוסף עבור Redis
-using System.Text.Json; // נוסף עבור Serialization
+using Microsoft.Extensions.Caching.Distributed; 
+using System.Text.Json; 
 
 namespace Services
 {

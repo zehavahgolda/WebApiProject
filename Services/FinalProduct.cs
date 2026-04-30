@@ -1,4 +1,6 @@
 ﻿using DTOs;
+using System.Text.Json.Serialization; 
+
 namespace Services
 {
     public class FinalProducts
@@ -7,15 +9,14 @@ namespace Services
         public int TotalCount { get; set; }
         public bool HasNext { get; set; }
         public bool HasPrev { get; set; }
-        public FinalProducts(IEnumerable<ProductDto> items, int total, bool hasNext, bool hasPrev)
+
+        [JsonConstructor] 
+        public FinalProducts(IEnumerable<ProductDto> items, int totalCount, bool hasNext, bool hasPrev)
         {
             Items = items;
-            TotalCount = total;
+            TotalCount = totalCount;
             HasNext = hasNext;
             HasPrev = hasPrev;
         }
-
     }
-
-
 }

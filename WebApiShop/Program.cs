@@ -88,7 +88,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseCors("MyPolicy");
-
+app.UseMiddleware<RateLimitMiddleware>();
 app.UseMiddleware<RatingMiddleware>();
 
 app.UseAuthentication();
