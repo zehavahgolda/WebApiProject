@@ -69,6 +69,7 @@ public class ProductsController : ControllerBase
   
 
     [HttpPost]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult<ProductDto>> Post([FromBody] ProductDto productDto)
     {
         var product = _mapper.Map<ProductDto, Product>(productDto);
@@ -80,7 +81,7 @@ public class ProductsController : ControllerBase
 
 
     [HttpPut("{id}")]
-  
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Put(int id, [FromBody] ProductDto productDto)
     {
         var productToUpdate = _mapper.Map<ProductDto, Product>(productDto);
@@ -92,6 +93,7 @@ public class ProductsController : ControllerBase
 
 
     [HttpDelete("{id}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Delete(int id)
     {
         
@@ -112,6 +114,7 @@ public class ProductsController : ControllerBase
         }
     }
     [HttpPost("upload-image")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> UploadImage(IFormFile file)
     {
         if (file == null || file.Length == 0)

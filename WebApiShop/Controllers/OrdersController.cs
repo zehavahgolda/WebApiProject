@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Services;
+﻿using DTOs;
 using Entity;
-using DTOs;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Services;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace WebApiShop.Controllers
 {
@@ -30,6 +31,7 @@ namespace WebApiShop.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<OrderDto>> Post([FromBody] Order order)
         {
             _logger.LogInformation($"Rating: Post order called for User {order.UserId}.");

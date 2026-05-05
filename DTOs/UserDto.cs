@@ -38,4 +38,8 @@ namespace DTOs
         [Required, EmailAddress] string Email,
         [Required] string Password
     );
+    public record LoginResponseDto(
+        UserResponseDto User,
+        string Token
+    );
 }

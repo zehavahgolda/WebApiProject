@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Services;
+﻿using DTOs;
 using Entity;
-using DTOs;
+using Microsoft.AspNetCore.Authorization; // חובה כדי להשתמש ב-[Authorize]
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Services;
 using System.Threading.Tasks;
+using System.Security.Claims; 
 
 namespace WebApiShop.Controllers
 {
@@ -18,14 +21,12 @@ namespace WebApiShop.Controllers
             _userservice = userservice;
             _logger = logger;
         }
+      
 
         [HttpPost("register")]
         public async Task<ActionResult<UserResponseDto>> Post([FromBody] UserRegisterDto userDto)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
             User user = new User
             {
@@ -37,70 +38,67 @@ namespace WebApiShop.Controllers
                 Address = userDto.Address
             };
 
+            _logger.LogInformation($"Registering new user: {user.Email}");
             User acceptedUser = await _userservice.addUserServices(user);
 
             if (acceptedUser == null)
             {
+                _logger.LogWarning($"Registration failed for: {user.Email}");
                 return BadRequest("סיסמה חלשה או משתמש כבר קיים במערכת");
             }
 
-            var response = new UserResponseDto(
-                acceptedUser.Id,
-                acceptedUser.FirstName,
-                acceptedUser.LastName,
-                acceptedUser.Email,
-                acceptedUser.Phone,
-                acceptedUser.Address
-            );
-
-            return Ok(response);
+            return Ok(new UserResponseDto(acceptedUser.Id, acceptedUser.FirstName, acceptedUser.LastName, acceptedUser.Email, acceptedUser.Phone, acceptedUser.Address));
         }
 
         [HttpPost("login")]
         public async Task<ActionResult<UserResponseDto>> Login([FromBody] UserLoginDto loginInfo)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
             _logger.LogInformation($"Attempting login for: Email='{loginInfo.Email}'");
+            var result = await _userservice.loginServices(loginInfo);
 
-            UserResponseDto authenticatedUser = await _userservice.loginServices(loginInfo);
-
-            if (authenticatedUser == null)
+            if (result == null)
             {
                 _logger.LogWarning($"Login failed for: {loginInfo.Email}");
                 return Unauthorized("פרטי התחברות שגויים או משתמש לא קיים");
             }
 
-            _logger.LogInformation($"Login success: UserName={authenticatedUser.Email}");
+            Response.Cookies.Append("authToken", result.Token, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = System.DateTime.UtcNow.AddHours(3)
+            });
 
-            return Ok(authenticatedUser);
+            _logger.LogInformation($"Login success: UserName={result.User.Email}");
+            return Ok(result.User);
         }
+
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> Put(int id, [FromBody] UserRegisterDto userDto)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             await _userservice.update(userDto, id);
             return NoContent();
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<UserResponseDto>> Get(int id)
         {
-    
-            var user = await _userservice.GetById(id);
-
-            if (user == null)
+            
+            var userIdFromToken = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userIdFromToken != id.ToString())
             {
-                return NotFound(); 
+                return Forbid();
             }
-
+            var user = await _userservice.GetById(id);
+            if (user == null) return NotFound();
             return Ok(user);
         }
+
     }
 }

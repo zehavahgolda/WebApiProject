@@ -7,12 +7,11 @@ namespace Services
 {
     public interface IUserservice
     {
-      
         Task<UserResponseDto?> addUserServices(UserRegisterDto userDto);
-        Task<User> addUserServices(User user);
+        Task<User?> addUserServices(User user);
         Task<UserResponseDto?> GetById(int id);
         Task<IEnumerable<UserResponseDto>> GetUsers();
-        Task<UserResponseDto?> loginServices(UserLoginDto loginDto);
+        Task<LoginResponseDto?> loginServices(UserLoginDto loginDto);
         Task update(UserRegisterDto userDto, int id);
     }
 }
