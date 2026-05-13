@@ -1,6 +1,6 @@
 ﻿using DTOs;
 using Entity;
-using Microsoft.AspNetCore.Authorization; // חובה כדי להשתמש ב-[Authorize]
+using Microsoft.AspNetCore.Authorization; 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Services;
@@ -51,7 +51,7 @@ namespace WebApiShop.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<UserResponseDto>> Login([FromBody] UserLoginDto loginInfo)
+        public async Task<ActionResult<LoginResponseDto>> Login([FromBody] UserLoginDto loginInfo)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -73,7 +73,7 @@ namespace WebApiShop.Controllers
             });
 
             _logger.LogInformation($"Login success: UserName={result.User.Email}");
-            return Ok(result.User);
+            return Ok(result);
         }
 
         [HttpPut("{id}")]

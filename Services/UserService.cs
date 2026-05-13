@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
 using Microsoft.Extensions.Logging;
-
+using BCrypt.Net; 
 namespace Services
 {
     public class UserService : IUserservice
@@ -51,10 +51,11 @@ namespace Services
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-
         public async Task<User?> addUserServices(User user)
         {
             _logger.LogInformation($"Adding user to repository: {user.Email}");
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+
             return await _IuserRepository.AddUser(user);
         }
 

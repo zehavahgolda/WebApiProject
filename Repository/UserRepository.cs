@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BCrypt.Net; 
 
 namespace Repository
 {
@@ -45,7 +46,7 @@ namespace Repository
             existingUser.LastName = updatedUser.LastName;
             existingUser.Phone = updatedUser.Phone;
             existingUser.Address = updatedUser.Address;
-            existingUser.Email = updatedUser.Email; 
+            existingUser.Email = updatedUser.Email;
 
             await _storeContext.SaveChangesAsync();
             return existingUser;
@@ -59,10 +60,19 @@ namespace Repository
             }
 
             string email = user.Email.Trim();
-            string password = user.Password;
+            string providedPassword = user.Password;
+            var dbUser = await _storeContext.Users
+                .FirstOrDefaultAsync(x => x.Email.Trim() == email);
 
-            return await _storeContext.Users
-                .FirstOrDefaultAsync(x => x.Email.Trim() == email && x.Password == password);
+            if (dbUser == null)
+            {
+                return null;
+            }
+
+            
+            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(providedPassword, dbUser.Password);
+
+            return isPasswordValid ? dbUser : null;
         }
     }
 }
