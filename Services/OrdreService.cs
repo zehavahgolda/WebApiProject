@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Repository;
 using System;
 using System.Collections.Generic;
+using System.Text.Json; 
 using System.Threading.Tasks;
 
 namespace Services
@@ -15,13 +16,15 @@ namespace Services
         private readonly IProductRepository _productRepository;
         private readonly IMapper _imapper;
         private readonly ILogger<OrderService> _logger;
+        private readonly IKafkaProducerService _kafkaProducerService; 
 
-        public OrderService(IOrderrRepository orderRepository, IMapper imapper, IProductRepository productRepository, ILogger<OrderService> logger)
+        public OrderService(IOrderrRepository orderRepository, IMapper imapper, IProductRepository productRepository, ILogger<OrderService> logger, IKafkaProducerService kafkaProducerService)
         {
             _orderRepository = orderRepository;
             _productRepository = productRepository;
             _imapper = imapper;
             _logger = logger;
+            _kafkaProducerService = kafkaProducerService; 
         }
 
         public async Task<OrderDto> addOrder(Order order)
@@ -46,12 +49,37 @@ namespace Services
 
                 if (Math.Abs(originalSum - calculatedSum) > 0.01)
                 {
-                    _logger.LogWarning("Order sum mismatch! Received: {originalSum}, Calculated: {calculatedSum}", originalSum, calculatedSum);
+                    _logger.LogWarning("Order sum mismatcדh! Received: {originalSum}, Calculated: {calculatedSum}", originalSum, calculatedSum);
                 }
 
                 order.OrderSum = calculatedSum;
                 Order addedOrder = await _orderRepository.AddOrder(order);
-                return _imapper.Map<OrderDto>(addedOrder);
+                var orderDto = _imapper.Map<OrderDto>(addedOrder);
+
+                // --- שחזור הבלוק הישיר שעבד בהצלחה ---
+                try
+                {
+                    var minimalOrderDetails = new
+                    {
+                        OrderId = orderDto.OrderId,
+                        OrderDate = orderDto.OredrDate,
+                        TotalSum = orderDto.OrderSum,
+                        Status = orderDto.OrderStatus,
+                        CustomerName = $"{orderDto.UserFirstName} {orderDto.UserlastName}".Trim()
+                    };
+
+                    string messageValue = JsonSerializer.Serialize(minimalOrderDetails);
+
+                    // קריאה ישירה (כמו שעבד קודם) אך מוגנת בתוך ה-Try/Catch כדי שלא תפיל כלום
+                    await _kafkaProducerService.ProduceAsync(messageValue);
+                    _logger.LogInformation("Message successfully sent to Kafka from OrderService.");
+                }
+                catch (Exception kafkaEx)
+                {
+                    _logger.LogError(kafkaEx, "Kafka interface failed to send message for Order ID: {OrderId}", orderDto.OrderId);
+                }
+
+                return orderDto;
             }
             catch (Exception ex)
             {
