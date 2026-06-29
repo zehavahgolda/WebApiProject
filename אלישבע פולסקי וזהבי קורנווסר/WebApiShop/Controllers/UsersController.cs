@@ -23,7 +23,7 @@ namespace WebApiShop.Controllers
             postData.id = numberOfUsers + 1;
 
             string userJson = JsonSerializer.Serialize(postData);
-            System.IO.File.AppendAllText(_filePath, userJson + Environment.NewLine);
+            await System.IO.File.AppendAllTextAsync(_filePath, userJson + Environment.NewLine); // fix(C5): async
 
             return CreatedAtAction(nameof(Get), new { id = postData.id }, postData);
         }
@@ -31,7 +31,7 @@ namespace WebApiShop.Controllers
         [HttpPost("Login")]
         public IActionResult Login([FromBody] User postData)
         {
-            var lines = System.IO.File.ReadAllLines(_filePath);
+            var lines = await System.IO.File.ReadAllLinesAsync(_filePath); // fix(C5): use async file I/O
 
             foreach (var line in lines)
             {
@@ -65,7 +65,7 @@ namespace WebApiShop.Controllers
 
             if (found)
             {
-                System.IO.File.WriteAllLines(_filePath, lines);
+                await System.IO.File.WriteAllLinesAsync(_filePath, lines); // fix(C5): async
                 return Ok();
             }
 
@@ -75,7 +75,7 @@ namespace WebApiShop.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var lines = System.IO.File.ReadAllLines(_filePath);
+            var lines = await System.IO.File.ReadAllLinesAsync(_filePath); // fix(C5): use async file I/O
             foreach (var line in lines)
             {
                 if (string.IsNullOrWhiteSpace(line)) continue;
